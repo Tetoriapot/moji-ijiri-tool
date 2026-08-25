@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="文字数カウント、文字化け、鏡文字、カナスペル、ローマ字とかなの相互変換をブラウザだけで扱える文章加工ツールです。">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f3f1e9">
+  <title>文字いじりツール</title>
+  <link rel="stylesheet" href="css/style.css?v=20260825-public1">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">本文へ移動</a>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">文</div>
+        <div>
+          <p class="eyebrow">TEXT UTILITY · UNLISTED</p>
+          <h1>文字いじりツール</h1>
+        </div>
+      </div>
+      <div class="header-copy">
+        <p>数える、崩す、反転する、名づける、読みかえる。<br>文章のための小さな作業机です。</p>
+        <div class="privacy-chip"><span aria-hidden="true"></span>URL限定公開・端末内処理</div>
+      </div>
+    </header>
+
+    <main id="mainContent" tabindex="-1">
+      <nav class="mobile-workspace-nav" aria-label="モードと結果への移動">
+        <div class="mobile-mode-field">
+          <label for="mobileModeSelect">加工モード</label>
+          <select id="mobileModeSelect" aria-describedby="mobileModeHint">
+            <option value="count">文字数カウント</option>
+            <option value="mojibake">文字化け</option>
+            <option value="mirror">鏡文字</option>
+            <option value="kana">カナスペル</option>
+            <option value="romaji">ローマ字↔かな</option>
+          </select>
+          <span class="visually-hidden" id="mobileModeHint">5つの機能から選べます</span>
+        </div>
+        <button class="mobile-result-jump" id="mobileResultJump" type="button" aria-controls="countResults">
+          <span id="mobileResultJumpLabel">集計結果へ</span><span aria-hidden="true">↓</span>
+        </button>
+      </nav>
+
+      <section class="tool-card" aria-labelledby="workspace-title">
+        <div class="startup-status" id="startupStatus" role="alert" hidden>
+          <strong>ツールを開始できませんでした。</strong>
+          <span>通信状態を確認してページを再読み込みしてください。入力欄の文章は送信されていません。</span>
+        </div>
+        <h2 id="workspace-title" class="visually-hidden">文章加工ワークスペース</h2>
+
+        <aside class="updates-menu" aria-label="更新情報">
+          <details class="updates-disclosure">
+            <summary class="updates-summary">
+              <span class="updates-heading">
+                <span class="section-kicker">WHAT'S NEW</span>
+                <strong>更新情報</strong>
+              </span>
+              <span class="updates-latest">
+                <span class="updates-badge">最新</span>
+                <time datetime="2026-08-25">2026.08.25</time>
+                <span>URL限定公開に向けたプライバシー・安全・負荷対策を追加</span>
+              </span>
+              <span class="updates-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="updates-content">
+              <article class="update-entry update-entry--latest">
+                <div class="update-entry-heading">
+                  <time datetime="2026-08-25">2026.08.25</time>
+                  <span>限定公開</span>
+                </div>
+                <h3>検索対象外と安全な端末内処理を明示</h3>
+                <ul>
+                  <li>検索エンジンへ登録しない設定と、URL共有時の注意を追加</li>
+                  <li>保存内容・配信基盤・書き出しファイルの扱いを分かりやすく説明</li>
+                  <li>入力・ファイル容量の上限、セキュリティヘッダー、更新確認を強化</li>
+                </ul>
+              </article>
+              <article class="update-entry">
+                <div class="update-entry-heading">
+                  <time datetime="2026-08-25">2026.08.25</time>
+                  <span>上級機能</span>
+                </div>
+                <h3>試した結果を残し、同じ加工を再現</h3>
+                <ul>
+                  <li>演出結果のUndo・Redo、候補保存、左右比較を追加</li>
+                  <li>固定シード、名前付きプリセット、レシピJSONに対応</li>
+                  <li>選択範囲だけの加工と、複数TXTの進捗付き一括処理・CSV出力を追加</li>
+                </ul>
+              </article>
+              <article class="update-entry">
+                <div class="update-entry-heading">
+                  <time datetime="2026-08-25">2026.08.25</time>
+                  <span>使いやすさ</span>
+                </div>
+                <h3>目的と保存内容が分かる操作へ改善</h3>
+                <ul>
+                  <li>文字化けを「直す・戻せる形にする・演出用」の3目的に整理</li>
+                  <li>カナ候補へ元の読み、生成理由、変更箇所を表示</li>
+                  <li>ローマ字方式と端末内データの管理機能を追加</li>
+                </ul>
+              </article>
+              <article class="update-entry">
+                <div class="update-entry-heading">
+                  <time datetime="2026-08-25">2026.08.25</time>
+                  <span>新機能</span>
+                </div>
+                <h3>ローマ字↔かな変換</h3>
+                <p>促音・長音・拗音にも対応した相互変換モードを追加しました。</p>
+              </article>
+              <article class="update-entry">
+                <div class="update-entry-heading">
+                  <time datetime="2026-08-25">2026.08.25</time>
+                  <span>新機能</span>
+                </div>
+                <h3>カナスペル候補</h3>
+                <p>カタカナ名から、リプサム・グリーキングを含むアルファベット表記候補を提案します。</p>
+              </article>
+            </div>
+          </details>
+        </aside>
+
+        <aside class="limited-access-menu" aria-labelledby="limitedAccessHeading">
+          <details class="limited-access-disclosure" id="limitedAccessDisclosure">
+            <summary class="limited-access-summary">
+              <span class="limited-access-heading">
+                <span class="section-kicker">UNLISTED</span>
+                <strong id="limitedAccessHeading">URL限定公開</strong>
+              </span>
+              <span class="limited-access-copy"><strong>検索対象外・認証なし</strong><span>URLを受け取った人は開けます</span></span>
+              <span class="limited-access-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="limited-access-content">
+              <section>
+                <h3>公開範囲</h3>
+                <ul>
+                  <li>検索エンジンへ登録しない設定にしています。</li>
+                  <li>ログイン認証はありません。URLを知る人や転送された相手は閲覧できます。</li>
+                  <li>URLを秘密情報として扱い、公開投稿や不特定多数への転送は避けてください。</li>
+                </ul>
+              </section>
+              <section>
+                <h3>文章と通信</h3>
+                <ul>
+                  <li>入力文章・ファイル内容・変換結果はブラウザ内で処理し、アプリから外部へ送信しません。</li>
+                  <li>ページ表示に必要な一般的な通信情報は、配信基盤で取り扱われる場合があります。</li>
+                  <li>このページにはアクセス解析・広告・外部フォントを組み込んでいません。</li>
+                  <li>ブラウザ・OS・日本語入力の入力支援は、各端末の設定に従います。入力欄のブラウザ校正はオフにしています。</li>
+                </ul>
+              </section>
+              <section>
+                <h3>安全な使い方</h3>
+                <ul>
+                  <li>共用端末では下書き・お気に入り・候補を保存しないか、使用後に端末内データを削除してください。</li>
+                  <li>TXT・CSV・JSONには本文や結果が含まれます。保存先と共有相手を確認してください。</li>
+                  <li>コピーした文章とダウンロード済みファイルは、この画面の削除操作では消えません。</li>
+                  <li>URLをメッセージで共有すると、共有先サービスがページ情報のプレビューを取得する場合があります。</li>
+                  <li>Base64・16進表記は暗号化ではありません。秘密を隠す用途には使えません。</li>
+                </ul>
+              </section>
+            </div>
+          </details>
+        </aside>
+
+        <section class="device-data-menu" aria-labelledby="deviceDataHeading">
+          <details class="device-data-disclosure" id="deviceDataDisclosure">
+            <summary class="device-data-summary">
+              <span class="device-data-heading">
+                <span class="section-kicker">PRIVACY</span>
+                <strong id="deviceDataHeading">端末内データ</strong>
+              </span>
+              <span class="device-data-counts" id="deviceDataCounts">設定のみ保存</span>
+              <span class="device-data-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="device-data-content">
+              <div class="device-data-explanation">
+                <h3>このブラウザに保存されるもの</h3>
+                <ul>
+                  <li>選択したモードや変換設定</li>
+                  <li>オンにした場合だけ、入力下書き1件</li>
+                  <li>カナスペルのお気に入り最大100件と履歴最大20件</li>
+                  <li>演出用の保存候補最大20件（候補名・元の入力・変換結果を含む）と名前付きプリセット最大12件</li>
+                  <li>「すべて削除」を別タブにも伝える、内容を含まない匿名の削除識別子</li>
+                </ul>
+                <p>すべてこのブラウザ内だけに保存され、アプリから外部へ送信されません。ただし暗号化保管ではありません。同じブラウザを使う人に見られる可能性があります。</p>
+              </div>
+              <div class="device-data-controls">
+                <div>
+                  <label class="switch" for="kanaHistoryEnabled">
+                    <input id="kanaHistoryEnabled" type="checkbox" checked>
+                    <span class="switch-track" aria-hidden="true"><span></span></span>
+                    <span class="switch-label">カナスペル履歴を残す</span>
+                  </label>
+                  <p>オフにすると新しい履歴を保存しません。すでにある履歴は、削除するまで残ります。</p>
+                </div>
+                <div class="device-data-actions">
+                  <button class="button button--quiet" id="exportKanaDataButton" type="button">お気に入り・履歴を書き出す</button>
+                  <button class="button button--quiet" id="importKanaDataButton" type="button">JSONを読み込む</button>
+                  <input class="visually-hidden" id="kanaDataFileInput" type="file" accept=".json,application/json" aria-label="お気に入りと履歴のJSONを選択" tabindex="-1">
+                  <button class="button button--danger" id="deleteAllLocalDataButton" type="button">端末内データをすべて削除</button>
+                </div>
+                <p class="device-data-export-note">書き出すJSONには、保存した名前と候補がそのまま含まれます。「すべて削除」は画面上の文章、クリップボード、ダウンロード済みファイルまでは消しません。共用端末ではそれらも個別に確認してください。</p>
+              </div>
+            </div>
+            <p class="device-data-status" id="deviceDataStatus" role="status" aria-live="polite"></p>
+          </details>
+        </section>
+
+        <div class="tabs-wrap">
+          <div class="tabs" role="tablist" aria-label="加工モード">
+            <button class="tab is-active" id="tab-count" type="button" role="tab" aria-selected="true" aria-controls="panel-count" data-mode="count">
+              <span class="tab-number" aria-hidden="true">01</span>文字数カウント
+            </button>
+            <button class="tab" id="tab-mojibake" type="button" role="tab" aria-selected="false" aria-controls="panel-mojibake" data-mode="mojibake" tabindex="-1">
+              <span class="tab-number" aria-hidden="true">02</span>文字化け
+            </button>
+            <button class="tab" id="tab-mirror" type="button" role="tab" aria-selected="false" aria-controls="panel-mirror" data-mode="mirror" tabindex="-1">
+              <span class="tab-number" aria-hidden="true">03</span>鏡文字
+            </button>
+            <button class="tab" id="tab-kana" type="button" role="tab" aria-selected="false" aria-controls="panel-kana" data-mode="kana" tabindex="-1">
+              <span class="tab-number" aria-hidden="true">04</span>カナスペル
+            </button>
+            <button class="tab" id="tab-romaji" type="button" role="tab" aria-selected="false" aria-controls="panel-romaji" data-mode="romaji" tabindex="-1" aria-label="ローマ字とかなの相互変換">
+              <span class="tab-number" aria-hidden="true">05</span>ローマ字↔かな
+            </button>
+          </div>
+        </div>
+
+        <div class="workspace-body">
+          <section class="input-section" id="sharedInputRegion" aria-labelledby="input-heading">
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">SOURCE</p>
+                <h3 id="input-heading"><label id="sourceTextLabel" for="sourceText">入力</label></h3>
+              </div>
+              <div class="input-tools">
+                <button class="text-button" id="saveInputButton" type="button" disabled>
+                  <span aria-hidden="true">↓</span> 入力をTXT保存
+                </button>
+                <button class="text-button" id="openTextFileButton" type="button">
+                  <span aria-hidden="true">＋</span> TXTを開く / 一括
+                </button>
+                <input class="visually-hidden" id="textFile" type="file" accept=".txt,text/plain" multiple tabindex="-1">
+              </div>
+            </div>
+
+            <div class="textarea-frame" id="dropZone">
+              <textarea id="sourceText" rows="10" dir="auto" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="1000000" placeholder="ここに文章を入力してください" aria-describedby="inputHint fileStatus"></textarea>
+              <div class="textarea-meta">
+                <span id="inputHint">入力は100万文字、TXTは1件2MBまで。通常変換は50万文字、演出用は20万文字まで</span>
+                <span id="liveCharacterCount" aria-hidden="true">0文字</span>
+              </div>
+            </div>
+            <p class="inline-status" id="fileStatus" role="status" aria-live="polite"></p>
+
+            <div class="selection-transform-bar" id="selectionTransformBar" hidden>
+              <div class="selection-transform-copy">
+                <span class="section-kicker">RANGE</span>
+                <strong id="selectionTransformHeading">選択範囲だけ加工</strong>
+                <p id="selectionTransformStatus">入力欄で範囲を選ぶと利用できます。</p>
+              </div>
+              <label class="switch" for="transformSelectionOnly">
+                <input id="transformSelectionOnly" type="checkbox" aria-describedby="selectionTransformStatus" disabled>
+                <span class="switch-track" aria-hidden="true"><span></span></span>
+                <span class="switch-label">選択部分だけ変換し、ほかは維持</span>
+              </label>
+            </div>
+
+            <section class="encoding-diagnostics" id="encodingDiagnostics" aria-labelledby="encodingHeading" hidden>
+              <div class="encoding-heading">
+                <div>
+                  <p class="section-kicker">ENCODING</p>
+                  <h4 id="encodingHeading">文字コード候補</h4>
+                </div>
+                <p id="encodingSummary">プレビューを確認して、正しく読める候補を選んでください。</p>
+              </div>
+              <fieldset class="encoding-fieldset">
+                <legend class="visually-hidden">読み込む文字コード</legend>
+                <div class="encoding-candidate-list" id="encodingCandidateList"></div>
+              </fieldset>
+              <div class="encoding-actions">
+                <button class="button button--accent" id="applyEncodingButton" type="button">この文字コードで読み込む</button>
+                <button class="button button--quiet" id="cancelEncodingButton" type="button">キャンセル</button>
+              </div>
+            </section>
+
+            <section class="batch-panel" id="batchPanel" aria-labelledby="batchHeading" hidden>
+              <div class="batch-heading">
+                <div>
+                  <p class="section-kicker">BATCH</p>
+                  <h4 id="batchHeading">複数TXTを一括処理</h4>
+                </div>
+                <p id="batchModeSummary">現在の変換設定を各ファイルへ適用します。最大50件・1件2MB・合計20MBまでです。</p>
+              </div>
+              <div class="batch-progress-wrap">
+                <progress id="batchProgress" max="1" value="0" aria-label="一括処理の進捗">0%</progress>
+                <span id="batchProgressText">待機中</span>
+              </div>
+              <div class="batch-actions">
+                <button class="button button--accent" id="batchStartButton" type="button">一括処理を開始</button>
+                <button class="button button--quiet" id="batchCancelButton" type="button" disabled>キャンセル</button>
+                <button class="button button--dark" id="batchCsvButton" type="button" disabled>結果をCSV保存</button>
+                <button class="text-button" id="batchClearButton" type="button">一覧を閉じる</button>
+              </div>
+              <p class="batch-privacy-note">処理は端末内で行います。通常変換は1件50万文字、演出用は1件20万文字まで。結果TXTとCSVにはファイル名・変換結果が含まれるため、保存先と共有相手をご確認ください。</p>
+              <ul class="batch-result-list" id="batchResultList" aria-label="一括処理するファイル"></ul>
+              <p class="batch-status" id="batchStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+
+            <div class="draft-bar">
+              <div class="draft-copy">
+                <label class="switch" for="autoSaveInput">
+                  <input id="autoSaveInput" type="checkbox">
+                  <span class="switch-track" aria-hidden="true"><span></span></span>
+                  <span class="switch-label">下書きをこの端末に自動保存</span>
+                </label>
+                <p>入力だけを1件、最大512KB・30日間このブラウザに保存します。外部には送信しません。</p>
+              </div>
+              <button class="button button--quiet draft-delete" id="deleteDraftButton" type="button" disabled>保存を停止して削除</button>
+            </div>
+            <p class="inline-status draft-status" id="draftStatus" role="status" aria-live="polite"></p>
+          </section>
+
+          <section class="mode-panel" id="panel-count" role="tabpanel" aria-labelledby="tab-count" tabindex="0">
+            <div class="option-bar">
+              <div class="option-title">
+                <span class="option-icon" aria-hidden="true">⌁</span>
+                <div>
+                  <p class="section-kicker">LIMIT</p>
+                  <label for="characterLimit">文字数制限</label>
+                </div>
+              </div>
+              <div class="limit-controls">
+                <select id="characterLimit">
+                  <option value="0">なし</option>
+                  <option value="100">100文字</option>
+                  <option value="140">140文字</option>
+                  <option value="280">280文字</option>
+                  <option value="500">500文字</option>
+                  <option value="custom">任意入力</option>
+                </select>
+                <label class="custom-limit" id="customLimitWrap" for="customLimit" hidden>
+                  <span class="visually-hidden">任意の文字数</span>
+                  <input id="customLimit" type="number" min="1" max="10000000" step="1" inputmode="numeric" placeholder="例：1200">
+                </label>
+                <output class="limit-status" id="limitStatus"></output>
+              </div>
+            </div>
+
+            <p class="visually-hidden" id="countSummaryStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+
+            <div class="selection-pill" id="selectionStatus" hidden>
+              <span aria-hidden="true">↳</span> 選択範囲：<strong id="selectionCount">0</strong>文字
+            </div>
+
+            <dl class="stats-grid" id="countResults" aria-label="文字数の集計結果" tabindex="-1">
+              <div class="stat-card stat-card--primary">
+                <dt>総文字数</dt>
+                <dd id="statTotal">0</dd>
+                <span>見た目に近い単位</span>
+              </div>
+              <div class="stat-card">
+                <dt>空白なし</dt>
+                <dd id="statNoSpaces">0</dd>
+                <span>改行は含みます</span>
+              </div>
+              <div class="stat-card">
+                <dt>改行なし</dt>
+                <dd id="statNoLines">0</dd>
+                <span>空白は含みます</span>
+              </div>
+              <div class="stat-card">
+                <dt>空白・改行なし</dt>
+                <dd id="statNoWhitespace">0</dd>
+                <span>文字だけを集計</span>
+              </div>
+              <div class="stat-card">
+                <dt>行数</dt>
+                <dd id="statLines">0</dd>
+                <span>空行も1行として集計</span>
+              </div>
+              <div class="stat-card">
+                <dt>単語数</dt>
+                <dd id="statWords">0</dd>
+                <span>日本語・英語に対応</span>
+              </div>
+              <div class="stat-card stat-card--wide">
+                <dt>UTF-8 バイト数</dt>
+                <dd><span id="statBytes">0</span><small> bytes</small></dd>
+                <span>保存時のおおよその容量</span>
+              </div>
+            </dl>
+          </section>
+
+          <section class="mode-panel" id="panel-mojibake" role="tabpanel" aria-labelledby="tab-mojibake" tabindex="0" hidden>
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">GLITCH</p>
+                <h3>何をしたいですか？</h3>
+              </div>
+              <p>目的を選ぶと、必要な操作だけを表示します。</p>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend class="visually-hidden">文字化けで行いたいことを選択</legend>
+              <div class="choice-grid choice-grid--three mojibake-purpose-grid">
+                <label class="choice-card">
+                  <input type="radio" name="mojibakePurpose" value="repair" aria-controls="repairOptions" checked>
+                  <span class="choice-card-body">
+                    <span class="choice-mark" aria-hidden="true">↻</span>
+                    <span><strong>文字化けを直す</strong><small>貼り付けた文字列から元の文章を推定します</small></span>
+                  </span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="mojibakePurpose" value="encode" aria-controls="encodeOptions">
+                  <span class="choice-card-body">
+                    <span class="choice-mark" aria-hidden="true">⇄</span>
+                    <span><strong>戻せる形に変換</strong><small>あとで同じ文章へ戻せる形にします</small></span>
+                  </span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="mojibakePurpose" value="creative" aria-controls="creativeOptions creativeWarning glitchWorkbench" aria-describedby="creativeWarning">
+                  <span class="choice-card-body">
+                    <span class="choice-mark" aria-hidden="true">✦</span>
+                    <span><strong>演出用に崩す</strong><small>創作・ホラー向けに見た目を崩します</small></span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="option-card mojibake-purpose-card" id="repairOptions">
+              <div class="option-card-copy">
+                <span class="field-label">文字化けを直す</span>
+                <p>入力から復元方式を自動判定し、直せる場合だけ結果を表示します。</p>
+              </div>
+              <div class="option-card-control option-card-control--stack mojibake-purpose-control">
+                <button class="button button--accent" id="decodeMojibake" type="button">文字化けを直す</button>
+                <details class="mojibake-details">
+                  <summary>対応形式と注意点</summary>
+                  <p>Ã…系、MB64、MBHEXなどの復元を試します。すべての文字化けを直せるわけではありません。「�」を含む文章は完全には復元できません。TXTファイルは上の「TXTを開く」から文字コード候補を確認できます。</p>
+                </details>
+              </div>
+            </div>
+
+            <div class="option-card mojibake-purpose-card" id="encodeOptions" hidden>
+              <div class="option-card-copy">
+                <span class="field-label">戻せる形に変換</span>
+                <p>変換直後に復元チェックを行い、元へ戻せる結果だけを表示します。</p>
+              </div>
+              <div class="option-card-control option-card-control--stack mojibake-purpose-control">
+                <button class="button button--accent" id="encodeMojibake" type="button">戻せる形に変換</button>
+                <details class="mojibake-details" id="mojibakeMethodDetails">
+                  <summary>変換方法の詳細設定</summary>
+                  <div class="mojibake-method-fields">
+                    <label for="mojibakeMethod">変換方法</label>
+                    <select id="mojibakeMethod">
+                      <option value="latin1">UTF-8 → Latin-1 誤解釈風</option>
+                      <option value="base64">UTF-8 → Base64</option>
+                      <option value="hex">UTF-8 → 16進バイト列</option>
+                    </select>
+                    <p id="mojibakeMethodDescription">実際の文字コード誤認識に近い見た目です。</p>
+                    <p class="mojibake-repair-note">Base64と16進は暗号化ではありません。内容を秘密にする用途には使えません。</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <div class="option-card" id="creativeOptions" hidden>
+              <div class="option-card-copy">
+                <span class="field-label">崩し具合</span>
+                <p>「全体」は空白・改行を保ち、すべての文字に加工を加えます。演出用加工は20万文字までです。</p>
+              </div>
+              <div class="option-card-control option-card-control--stack">
+                <fieldset class="segmented-control glitch-intensity-control">
+                  <legend class="visually-hidden">演出用文字化けの強度</legend>
+                  <label><input type="radio" name="glitchIntensity" value="light" checked><span>軽度</span></label>
+                  <label><input type="radio" name="glitchIntensity" value="medium"><span>中度</span></label>
+                  <label><input type="radio" name="glitchIntensity" value="heavy"><span>重度</span></label>
+                  <label><input type="radio" name="glitchIntensity" value="full"><span>全体</span></label>
+                </fieldset>
+                <div class="compact-actions">
+                  <button class="button button--accent" id="createGlitch" type="button">演出用に崩す</button>
+                  <button class="button button--quiet" id="rerollGlitch" type="button">別パターン</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="warning-note" id="creativeWarning" role="alert" hidden>
+              <span aria-hidden="true">!</span>
+              <p><strong>この加工は復元できません。</strong>見た目を優先して文字の欠損や入れ替えを行います。</p>
+            </div>
+
+            <details class="glitch-workbench" id="glitchWorkbench" hidden>
+              <summary>
+                <span><span class="section-kicker">WORKBENCH</span><strong>演出の履歴・比較・再現</strong></span>
+                <span class="glitch-workbench-summary">Undo、候補保存、固定シード、プリセット、レシピJSON</span>
+              </summary>
+              <div class="glitch-workbench-body">
+                <div class="glitch-session-actions" aria-label="演出結果の履歴操作">
+                  <button class="button button--quiet" id="glitchUndoButton" type="button" disabled><span aria-hidden="true">←</span> Undo</button>
+                  <button class="button button--quiet" id="glitchRedoButton" type="button" disabled>Redo <span aria-hidden="true">→</span></button>
+                  <button class="button button--dark" id="glitchSaveCandidateButton" type="button" disabled>候補を保存</button>
+                  <button class="button button--quiet" id="glitchCompareButton" type="button" disabled>比較へ追加</button>
+                </div>
+
+                <section class="glitch-replay-grid" aria-label="再現設定">
+                  <div class="glitch-control-card">
+                    <label class="switch" for="glitchSeedLocked">
+                      <input id="glitchSeedLocked" type="checkbox">
+                      <span class="switch-track" aria-hidden="true"><span></span></span>
+                      <span class="switch-label">シードを固定</span>
+                    </label>
+                    <label for="glitchSeed">再現シード</label>
+                    <div class="glitch-inline-fields">
+                      <input id="glitchSeed" type="text" maxlength="80" autocomplete="off" placeholder="例：scene-01" disabled>
+                      <button class="button button--quiet" id="glitchReplayButton" type="button" disabled>再現</button>
+                    </div>
+                    <p>同じ入力・強度・シードなら、同じ結果になります。</p>
+                  </div>
+                  <div class="glitch-control-card">
+                    <label for="glitchPresetName">名前付きプリセット</label>
+                    <div class="glitch-inline-fields">
+                      <input id="glitchPresetName" type="text" maxlength="40" autocomplete="off" placeholder="例：ホラー見出し">
+                      <button class="button button--quiet" id="glitchSavePresetButton" type="button">保存</button>
+                    </div>
+                    <div class="glitch-inline-fields">
+                      <select id="glitchPresetSelect" aria-label="保存済みプリセット"><option value="">プリセットを選択</option></select>
+                      <button class="button button--quiet" id="glitchApplyPresetButton" type="button" disabled>適用</button>
+                      <button class="text-button" id="glitchDeletePresetButton" type="button" disabled>削除</button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="glitch-recipe-bar" aria-labelledby="glitchRecipeHeading">
+                  <div>
+                    <strong id="glitchRecipeHeading">レシピJSON</strong>
+                    <p>入力文章・選択範囲・出力・設定を含みます。保管場所にご注意ください。</p>
+                  </div>
+                  <div class="compact-actions">
+                    <button class="button button--quiet" id="glitchExportRecipeButton" type="button" disabled>レシピを保存</button>
+                    <button class="button button--quiet" id="glitchImportRecipeButton" type="button">レシピを読み込む</button>
+                    <input class="visually-hidden" id="glitchRecipeFileInput" type="file" accept=".json,application/json" aria-label="演出レシピJSONを選択" tabindex="-1">
+                  </div>
+                </section>
+
+                <div class="glitch-library-grid">
+                  <section aria-labelledby="glitchHistoryHeading">
+                    <div class="glitch-list-heading"><strong id="glitchHistoryHeading">この画面の履歴</strong><span id="glitchHistoryCount">0件</span></div>
+                    <p class="glitch-list-empty" id="glitchHistoryEmpty">演出用に崩すと、直近30件がここに並びます。</p>
+                    <ol class="glitch-history-list" id="glitchHistoryList"></ol>
+                  </section>
+                  <section aria-labelledby="glitchSavedHeading">
+                    <div class="glitch-list-heading"><strong id="glitchSavedHeading">保存した候補</strong><span id="glitchSavedCount">0件</span></div>
+                    <p class="glitch-list-empty" id="glitchSavedEmpty">保存候補はこの端末内に最大20件残ります。</p>
+                    <ul class="glitch-saved-list" id="glitchSavedList"></ul>
+                  </section>
+                </div>
+
+                <section class="glitch-compare" id="glitchCompareRegion" aria-labelledby="glitchCompareHeading" hidden>
+                  <div class="glitch-compare-heading">
+                    <div><span class="section-kicker">COMPARE</span><strong id="glitchCompareHeading">2案を左右比較</strong></div>
+                    <button class="text-button" id="glitchClearCompareButton" type="button">比較をクリア</button>
+                  </div>
+                  <div class="glitch-compare-grid">
+                    <label>案A<textarea id="glitchCompareLeft" rows="7" readonly placeholder="比較へ追加すると表示されます"></textarea></label>
+                    <label>案B<textarea id="glitchCompareRight" rows="7" readonly placeholder="もう1案を追加してください"></textarea></label>
+                  </div>
+                </section>
+                <p class="glitch-workbench-status" id="glitchWorkbenchStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+              </div>
+            </details>
+          </section>
+
+          <section class="mode-panel" id="panel-mirror" role="tabpanel" aria-labelledby="tab-mirror" tabindex="0" hidden>
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">REFLECT</p>
+                <h3>反転のしかた</h3>
+              </div>
+              <p>日本語は形を変えず、順序の反転だけを行います。</p>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend class="visually-hidden">鏡文字の変換方式</legend>
+              <div class="choice-grid choice-grid--four">
+                <label class="choice-card choice-card--compact">
+                  <input type="radio" name="mirrorMethod" value="reverse" checked>
+                  <span class="choice-card-body"><span class="choice-mark" aria-hidden="true">←</span><span><strong>文字順を逆転</strong><small>こんにちは → はちにんこ</small></span></span>
+                </label>
+                <label class="choice-card choice-card--compact">
+                  <input type="radio" name="mirrorMethod" value="mirror">
+                  <span class="choice-card-body"><span class="choice-mark mirror-glyph" aria-hidden="true">Ɔ</span><span><strong>鏡文字風</strong><small>対応する英数字・記号を置換</small></span></span>
+                </label>
+                <label class="choice-card choice-card--compact">
+                  <input type="radio" name="mirrorMethod" value="combined">
+                  <span class="choice-card-body"><span class="choice-mark" aria-hidden="true">⇆</span><span><strong>文字順＋鏡文字</strong><small>より鏡らしい見た目に</small></span></span>
+                </label>
+                <label class="choice-card choice-card--compact">
+                  <input type="radio" name="mirrorMethod" value="upsideDown">
+                  <span class="choice-card-body"><span class="choice-mark" aria-hidden="true">↡</span><span><strong>逆さ文字</strong><small>英数字を上下反転風に置換</small></span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="option-bar option-bar--switch">
+              <div class="option-title">
+                <span class="option-icon" aria-hidden="true">↵</span>
+                <div>
+                  <p class="section-kicker">LINE BREAKS</p>
+                  <span class="field-label">行単位で反転</span>
+                </div>
+              </div>
+              <label class="switch">
+                <input id="lineByLine" type="checkbox" checked>
+                <span class="switch-track" aria-hidden="true"><span></span></span>
+                <span class="switch-label">行ごとに処理する</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="mode-panel kana-panel" id="panel-kana" role="tabpanel" aria-labelledby="tab-kana" tabindex="0" hidden>
+            <div class="kana-hero">
+              <div>
+                <p class="section-kicker">NAME SPELLING</p>
+                <h3>カナスペル</h3>
+              </div>
+              <p>カタカナの名前を、創作に使いやすいアルファベット表記へ。正解を決めず、複数の綴りを提案します。</p>
+            </div>
+
+            <div class="kana-compose-card">
+              <div class="kana-input-copy">
+                <label for="kanaInput">カタカナの名前</label>
+                <p id="kanaInputHint">ひらがな、長音「ー」、中黒「・」、ハイフンも使えます（100文字まで）</p>
+              </div>
+              <div class="kana-input-row">
+                <input id="kanaInput" type="text" maxlength="100" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="カタカナの名前を入力" aria-describedby="kanaInputHint kanaInputError">
+                <button class="button button--accent kana-generate-button" id="kanaGenerateButton" type="button">英字名をつくる</button>
+              </div>
+              <p class="kana-input-error" id="kanaInputError" role="alert"></p>
+            </div>
+
+            <div class="kana-settings-grid">
+              <fieldset class="kana-setting-card kana-taste-group">
+                <legend>表記テイスト</legend>
+                <div class="kana-taste-options">
+                  <label><input type="radio" name="kanaTaste" value="standard" checked><span><strong>標準</strong><small>読みやすく自然</small></span></label>
+                  <label><input type="radio" name="kanaTaste" value="english"><span><strong>英語圏</strong><small>人名らしい綴り</small></span></label>
+                  <label><input type="radio" name="kanaTaste" value="fantasy"><span><strong>ファンタジー</strong><small>幻想的な装飾</small></span></label>
+                  <label><input type="radio" name="kanaTaste" value="classic"><span><strong>古典</strong><small>伝承・中世風</small></span></label>
+                  <label><input type="radio" name="kanaTaste" value="sf"><span><strong>SF</strong><small>未来・異世界風</small></span></label>
+                </div>
+              </fieldset>
+
+              <div class="kana-setting-card kana-fidelity-card">
+                <div class="kana-fidelity-heading">
+                  <label for="kanaFidelity">表記の変化</label>
+                  <output id="kanaFidelityValue" for="kanaFidelity">レベル3・ほどよく変化</output>
+                </div>
+                <input id="kanaFidelity" type="range" min="1" max="5" step="1" value="3" list="kanaFidelityMarks" aria-valuetext="レベル3・ほどよく変化">
+                <datalist id="kanaFidelityMarks">
+                  <option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option><option value="5"></option>
+                </datalist>
+                <div class="kana-range-labels" aria-hidden="true"><span>忠実</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>大胆</span></div>
+              </div>
+            </div>
+
+            <section class="kana-results" id="kanaResultsRegion" aria-labelledby="kana-results-heading" aria-describedby="kanaSuggestionNotice" tabindex="-1">
+              <div class="kana-section-heading">
+                <div>
+                  <p class="section-kicker">SUGGESTIONS</p>
+                  <h3 id="kana-results-heading">こんな表記はいかがですか？</h3>
+                </div>
+                <span class="kana-result-count" id="kanaResultCount" hidden></span>
+              </div>
+              <div class="kana-mechanical-note" id="kanaSuggestionNotice" role="note">
+                <span aria-hidden="true">i</span>
+                <p>候補は規則と限定的な辞書による機械的な提案です。実在の人名・言語としての正確な綴りや発音は保証しません。</p>
+              </div>
+              <div class="kana-empty-state" id="kanaEmptyState">
+                <span aria-hidden="true">Aa</span>
+                <p><strong>名前を入力すると候補が並びます。</strong>たとえば「リプサム・グリーキング」なら、Lipsum Greeking などを提案します。</p>
+              </div>
+              <div id="kanaGeneratedResults" hidden>
+                <section class="kana-recommendation" aria-labelledby="kana-recommended-heading">
+                  <div class="kana-subheading"><span>おすすめ</span><h4 id="kana-recommended-heading">バランスのよい表記</h4></div>
+                  <div id="kanaRecommendedCard"></div>
+                </section>
+                <section class="kana-alternatives" aria-labelledby="kana-alternatives-heading">
+                  <div class="kana-subheading"><span>その他</span><h4 id="kana-alternatives-heading">別の表記候補</h4></div>
+                  <ul class="kana-candidate-list" id="kanaCandidateList"></ul>
+                </section>
+                <div class="kana-result-actions">
+                  <button class="button button--quiet" id="kanaRerollButton" type="button"><span aria-hidden="true">↻</span>別の候補を見る</button>
+                  <button class="button button--dark" id="kanaCopyAllButton" type="button"><span aria-hidden="true">▣</span>候補を全部コピー</button>
+                </div>
+              </div>
+              <p class="visually-hidden" id="kanaResultStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+
+            <div class="kana-saved-grid">
+              <section class="kana-saved-card" aria-labelledby="kana-favorites-heading">
+                <div class="kana-saved-heading">
+                  <div><p class="section-kicker">SAVED</p><h3 id="kana-favorites-heading">お気に入り</h3></div>
+                  <span>この端末内に保存</span>
+                </div>
+                <p class="kana-saved-empty" id="kanaFavoritesEmpty">気に入った候補の「☆ お気に入り」から保存できます。</p>
+                <ul class="kana-saved-list" id="kanaFavoritesList"></ul>
+              </section>
+
+              <section class="kana-saved-card" aria-labelledby="kana-history-heading">
+                <div class="kana-saved-heading">
+                  <div><p class="section-kicker">RECENT</p><h3 id="kana-history-heading">履歴</h3></div>
+                  <button class="text-button kana-clear-history" id="kanaClearHistoryButton" type="button" hidden>すべて削除</button>
+                </div>
+                <p class="kana-saved-empty" id="kanaHistoryEmpty">生成した名前を直近20件まで保存します。</p>
+                <ul class="kana-saved-list" id="kanaHistoryList"></ul>
+              </section>
+            </div>
+          </section>
+
+          <section class="mode-panel roman-panel" id="panel-romaji" role="tabpanel" aria-labelledby="tab-romaji" tabindex="0" hidden>
+            <div class="panel-heading roman-heading">
+              <div>
+                <p class="section-kicker">TRANSLITERATE</p>
+                <h3>ローマ字とかなの相互変換</h3>
+              </div>
+              <p>入力中に自動で変換します。漢字や未対応の英単語、記号はそのまま残ります。</p>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend class="field-label roman-legend">変換方向</legend>
+              <div class="choice-grid choice-grid--two roman-direction-grid">
+                <label class="choice-card">
+                  <input type="radio" name="romajiDirection" value="toKana" checked>
+                  <span class="choice-card-body">
+                    <span class="choice-mark roman-choice-mark" aria-hidden="true">A</span>
+                    <span><strong>ローマ字 → かな</strong><small>toukyou → とうきょう</small></span>
+                  </span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="romajiDirection" value="toRomaji">
+                  <span class="choice-card-body">
+                    <span class="choice-mark roman-choice-mark" aria-hidden="true">あ</span>
+                    <span><strong>かな → ローマ字</strong><small>がっこう → gakkou</small></span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="option-card roman-script-options" id="romajiScriptOptions">
+              <div class="option-card-copy">
+                <span class="field-label">出力するかな</span>
+                <p>ひらがなとカタカナを切り替えられます。</p>
+              </div>
+              <fieldset class="segmented-control roman-script-control">
+                <legend class="visually-hidden">出力するかなの種類</legend>
+                <label><input type="radio" name="romajiScript" value="hiragana" checked><span>ひらがな</span></label>
+                <label><input type="radio" name="romajiScript" value="katakana"><span>カタカナ</span></label>
+              </fieldset>
+            </div>
+
+            <div class="roman-settings-grid" id="romajiOutputOptions" hidden>
+              <fieldset class="roman-option-card">
+                <legend>ローマ字方式</legend>
+                <div class="segmented-control roman-system-control">
+                  <label><input type="radio" name="romajiSystem" value="hepburn" checked><span>ヘボン式</span></label>
+                  <label><input type="radio" name="romajiSystem" value="kunrei"><span>訓令式</span></label>
+                  <label><input type="radio" name="romajiSystem" value="nihon"><span>日本式</span></label>
+                </div>
+                <p>し：shi / si、ぢ：ji / zi / di などの表記を切り替えます。</p>
+              </fieldset>
+              <div class="roman-option-card">
+                <label for="romajiLongVowel">長音の表し方</label>
+                <select id="romajiLongVowel">
+                  <option value="written">かな通り（toukyou）</option>
+                  <option value="spoken">発音寄り（tookyoo）</option>
+                  <option value="macron">マクロン（tōkyō）</option>
+                </select>
+                <p>「おう」「えい」や長音「ー」の表記方針です。</p>
+              </div>
+              <div class="roman-option-card">
+                <label for="romajiParticles">助詞の表し方</label>
+                <select id="romajiParticles">
+                  <option value="written">表記通り（ha / he / wo）</option>
+                  <option value="pronunciation">単独の助詞を発音通り（wa / e / o）</option>
+                </select>
+                <p>空白や句読点で区切られた「は・へ・を」だけを助詞として扱います。</p>
+              </div>
+            </div>
+
+            <div class="roman-note">
+              <span aria-hidden="true">i</span>
+              <p id="romajiPolicySummary"><strong>ローマ字入力は複数方式を受け付けます。</strong>未変換の語や複数の読み方がある表記は、下に確認項目として表示します。</p>
+            </div>
+            <section class="roman-diagnostics" id="romajiDiagnostics" aria-labelledby="romajiDiagnosticsHeading" hidden>
+              <div class="roman-diagnostics-heading">
+                <div><p class="section-kicker">CHECK</p><h4 id="romajiDiagnosticsHeading">変換前に確認できる箇所</h4></div>
+                <p id="romajiDiagnosticsSummary"></p>
+              </div>
+              <div class="roman-issue-list" id="romajiIssueList"></div>
+            </section>
+            <p class="visually-hidden" id="romajiConversionStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+          </section>
+
+          <section class="output-section" id="outputRegion" aria-labelledby="output-heading" tabindex="-1" hidden>
+            <div class="section-heading">
+              <div>
+                <p class="section-kicker">RESULT</p>
+                <h3 id="output-heading"><label id="outputTextLabel" for="outputText">出力</label></h3>
+              </div>
+              <p class="method-badge" id="methodBadge" hidden></p>
+            </div>
+            <div class="textarea-frame textarea-frame--output">
+              <textarea id="outputText" rows="8" dir="auto" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="3000000" placeholder="変換結果がここに表示されます" aria-describedby="conversionMessage"></textarea>
+              <div class="textarea-meta">
+                <span id="outputHint">出力は直接編集できます</span>
+                <span id="outputCharacterCount">0文字</span>
+              </div>
+            </div>
+            <p class="conversion-message" id="conversionMessage" role="status" aria-live="polite" aria-atomic="true"></p>
+          </section>
+
+          <div class="action-bar" id="sharedActionBar" aria-label="文章の操作">
+            <div class="action-bar-main">
+              <button class="button button--dark" id="copyButton" type="button">
+                <span aria-hidden="true">▣</span><span id="copyButtonLabel">統計をコピー</span>
+              </button>
+              <button class="button button--quiet transform-only" id="swapButton" type="button" hidden>
+                <span aria-hidden="true">⇅</span>入力と出力を交換
+              </button>
+              <button class="button button--quiet transform-only" id="saveButton" type="button" hidden>
+                <span aria-hidden="true">↓</span>TXT保存
+              </button>
+            </div>
+            <button class="button button--ghost" id="clearButton" type="button">
+              <span aria-hidden="true">×</span>クリア
+            </button>
+          </div>
+          <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span class="privacy-dot" aria-hidden="true"></span>入力された文章・名前は端末内だけで処理され、アプリから外部へ送信されません。</p>
+      <p>URL限定公開（検索対象外・認証なし） <span aria-hidden="true">／</span> 文章のための小さな文房具</p>
+    </footer>
+  </div>
+
+  <noscript><div class="noscript-notice" role="alert">このツールを使用するにはJavaScriptを有効にしてください。入力文章が外部へ送信されることはありません。</div></noscript>
+
+  <script src="js/boot.js?v=20260825-public1" defer></script>
+  <script src="js/count.js?v=20260825-public1" defer></script>
+  <script src="js/mojibake.js?v=20260825-public1" defer></script>
+  <script src="js/mirror.js?v=20260825-public1" defer></script>
+  <script src="js/kana-spell.js?v=20260825-public1" defer></script>
+  <script src="js/roman-kana.js?v=20260825-public1" defer></script>
+  <script src="js/encoding.js?v=20260825-public1" defer></script>
+  <script src="js/local-data.js?v=20260825-public1" defer></script>
+  <script src="js/workflow.js?v=20260825-public1" defer></script>
+  <script src="js/app.js?v=20260825-public1" defer></script>
+</body>
+</html>

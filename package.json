@@ -1,0 +1,14 @@
+{
+  "name": "moji-ijiri-tool",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "node scripts/build-github-pages.mjs",
+    "verify": "node scripts/verify-github-pages.mjs",
+    "test": "node scripts/build-github-pages.mjs && node scripts/verify-github-pages.mjs"
+  },
+  "type": "module"
+}
