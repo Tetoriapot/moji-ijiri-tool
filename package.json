@@ -6,6 +6,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "build:decoration": "node features/decorative-text/build.mjs public/js/decorative.js public/css/style.css",
+    "test:decoration": "node features/decorative-text/scripts/validate-data.mjs && node --test --test-isolation=none features/decorative-text/tests/*.test.mjs",
     "build": "node scripts/build-github-pages.mjs",
     "verify": "node scripts/verify-github-pages.mjs",
     "test": "node scripts/build-github-pages.mjs && node scripts/verify-github-pages.mjs"

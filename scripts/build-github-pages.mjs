@@ -6,6 +6,7 @@ import {
   writeFile,
 } from "node:fs/promises";
 import path from "node:path";
+import { buildDecoration } from "../features/decorative-text/build.mjs";
 
 import {
   assertSafeOutputDirectory,
@@ -161,6 +162,7 @@ async function copyPublishedFile(sourceRelativePath, destinationRelativePath) {
 }
 
 assertSafeOutputDirectory();
+await buildDecoration(path.join(repositoryRoot, "public/js/decorative.js"), path.join(repositoryRoot, "public/css/style.css"));
 const pagesRootPath = resolvePagesRootPath();
 const templatePath = path.join(repositoryRoot, "app", "standalone", "template.html");
 const template = await readFile(templatePath, "utf8");

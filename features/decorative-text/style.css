@@ -1,0 +1,69 @@
+/* Addon styles: scoped; uses the existing tool's light-theme tokens. */
+.decoration-panel { min-width: 0; }
+.decoration-panel p { overflow-wrap: anywhere; }
+.deco-notice { padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--accent-soft); color: var(--accent-dark); font-size: .85rem; }
+.deco-help { margin-bottom: 24px; font-size: .85rem; color: var(--ink-soft); }
+.deco-help summary { cursor: pointer; padding: 12px 0; min-height: 44px; color: var(--ink); font-weight: 700; }
+.deco-help p { line-height: 1.8; }
+.deco-source-label { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.deco-input-area { max-width: 680px; margin-bottom: 28px; }
+.deco-input-area textarea, .deco-manual textarea { display: block; width: 100%; min-height: 110px; resize: vertical; padding: 16px; border: 1px solid var(--line-strong); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: inherit; line-height: 1.7; }
+.deco-count, .deco-muted { font-size: .78rem; color: var(--ink-soft); line-height: 1.7; margin: 10px 0; }
+.deco-error { border-left: 3px solid var(--danger); padding-left: 12px; color: var(--danger); font-size: .85rem; }
+.deco-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
+.decoration-panel button, .decoration-panel select, .decoration-panel input { min-height: 44px; min-width: 44px; }
+.decoration-panel .button { padding: 10px 14px; font-size: .8rem; overflow-wrap: anywhere; white-space: normal; }
+.deco-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 8px; margin-bottom: 24px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-md); }
+.deco-tabs .button[aria-selected="true"], .deco-tabs .button[aria-selected="true"]:hover { color: var(--surface); background: var(--ink); border-color: var(--ink); box-shadow: inset 0 -3px var(--accent); }
+.deco-toolbar { display: flex; justify-content: flex-end; margin-bottom: 18px; }
+.deco-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; font-weight: 700; font-size: .8rem; }
+.deco-field select, .deco-field input { width: 100%; max-width: 100%; border: 1px solid var(--line-strong); border-radius: var(--radius-sm); padding: 10px 12px; background: var(--surface); color: var(--ink); font: inherit; }
+.deco-name-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; align-items: end; }
+.deco-result { border: 1px solid var(--accent); border-radius: var(--radius-md); padding: 24px; background: var(--accent-soft); margin-bottom: 24px; }
+.deco-result h4 { margin: 0; }
+.deco-preview { display: block; unicode-bidi: plaintext; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; font-size: 1.35rem; line-height: 1.8; min-width: 0; }
+.deco-preview.is-sample { color: var(--ink-soft); }
+.deco-result .deco-preview { padding: 20px 0; font-size: 1.6rem; }
+.deco-badge { display: inline-block; font-size: .7rem; padding: 2px 8px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: 20px; color: var(--ink-soft); }
+.deco-filters { display: grid; gap: 16px; margin-bottom: 16px; }
+.deco-categories { display: flex; flex-wrap: wrap; gap: 8px; }
+.deco-categories .button { width: auto; font-size: .75rem; padding: 8px 12px; border-radius: 30px; }
+.deco-categories [aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
+.deco-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 16px 0; }
+.deco-cards--symbols { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.deco-card { min-width: 0; padding: 20px; border: 1px solid var(--line-strong); border-radius: var(--radius-md); background: var(--surface); display: flex; flex-direction: column; gap: 8px; }
+.deco-card.is-selected { border: 2px solid var(--accent); background: var(--accent-soft); padding: 19px; }
+.deco-card h4 { margin: 0; font-size: .95rem; }
+.deco-card > .deco-actions { margin-top: auto; }
+.deco-card .deco-preview { max-height: 240px; overflow-y: auto; }
+.deco-card-main { width: 100%; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--ink); cursor: pointer; text-align: center; padding: 8px; }
+.deco-card-main:hover { background: var(--surface-soft); }
+.deco-card-main:disabled { cursor: default; }
+.deco-card-label { display: block; font-size: .8rem; font-weight: 700; margin-top: 8px; }
+.deco-cards--symbols .deco-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.deco-cards--symbols .button { font-size: .75rem; padding: 8px 4px; }
+.deco-empty { padding: 24px; border: 1px dashed var(--line-strong); border-radius: var(--radius-md); text-align: center; }
+[data-density="compact"] .deco-card { padding: 12px; gap: 4px; }
+[data-density="compact"] .deco-cards { gap: 10px; }
+.deco-manual { width: min(640px, calc(100% - 24px)); max-height: 90vh; overflow-y: auto; padding: 24px; border: 1px solid var(--line-strong); border-radius: var(--radius-md); background: var(--surface); color: var(--ink); }
+.deco-manual::backdrop { background: rgb(32 43 42 / .6); }
+.deco-manual .deco-actions { margin-top: 16px; }
+.decoration-panel :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.decoration-panel [hidden] { display: none !important; }
+@media (max-width: 959px) {
+  .deco-cards--symbols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  .decoration-panel { margin-left: -8px; margin-right: -8px; }
+  .deco-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .deco-cards, .deco-name-controls { grid-template-columns: minmax(0, 1fr); }
+  .deco-cards--symbols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .deco-cards--symbols .deco-card { padding: 10px; }
+  .deco-cards--symbols .deco-actions { grid-template-columns: minmax(0, 1fr); }
+  .deco-card { padding: 16px; }
+  .deco-result { padding: 16px; }
+  .deco-result .deco-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .deco-input-area textarea, .deco-field input, .deco-field select { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .decoration-panel * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active) { .deco-card, .deco-card.is-selected, .deco-tabs [aria-selected="true"] { border-color: ButtonText; } }

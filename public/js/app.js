@@ -32,7 +32,7 @@
   const kanaTasteLabels = Object.freeze({ standard: "標準", english: "英語圏", fantasy: "ファンタジー", classic: "古典", sf: "SF" });
   const kanaFidelityLabels = Object.freeze(["", "かなり忠実", "軽く自然化", "ほどよく変化", "しっかり創作", "大胆に創作"]);
   const validSettings = Object.freeze({
-    mode: ["count", "mojibake", "mirror", "kana", "romaji"],
+    mode: ["count", "mojibake", "mirror", "kana", "romaji", "decoration"],
     limit: ["0", "100", "140", "280", "500", "custom"],
     mojibakePurpose: ["repair", "encode", "creative"],
     mojibakeMethod: ["latin1", "base64", "hex"],
@@ -66,8 +66,8 @@
   });
 
   const elements = {
-    tabs: Array.from(document.querySelectorAll('[role="tab"]')),
-    panels: Array.from(document.querySelectorAll('[role="tabpanel"]')),
+    tabs: Array.from(document.querySelectorAll('.tabs [role="tab"]')),
+    panels: Array.from(document.querySelectorAll('.mode-panel[role="tabpanel"]')),
     mobileModeSelect: document.getElementById("mobileModeSelect"),
     mobileResultJump: document.getElementById("mobileResultJump"),
     mobileResultJumpLabel: document.getElementById("mobileResultJumpLabel"),
@@ -1059,7 +1059,8 @@
       mojibake: { target: "outputRegion", label: "出力へ" },
       mirror: { target: "outputRegion", label: "出力へ" },
       kana: { target: "kanaResultsRegion", label: "候補へ" },
-      romaji: { target: "outputRegion", label: "出力へ" }
+      romaji: { target: "outputRegion", label: "出力へ" },
+      decoration: { target: "panel-decoration", label: "飾り文字へ" }
     };
     const configuration = configurations[mode] || configurations.count;
     elements.mobileModeSelect.value = mode;
@@ -1111,8 +1112,8 @@
 
     const isKana = nextMode === "kana";
     const isTransform = nextMode === "mojibake" || nextMode === "mirror" || nextMode === "romaji";
-    elements.sharedInputRegion.hidden = isKana;
-    elements.sharedActionBar.hidden = isKana;
+    elements.sharedInputRegion.hidden = isKana || nextMode === "decoration";
+    elements.sharedActionBar.hidden = isKana || nextMode === "decoration";
     elements.outputRegion.hidden = !isTransform;
     elements.swapButton.hidden = !isTransform;
     elements.saveButton.hidden = !isTransform || nextMode === "romaji";
@@ -1137,6 +1138,13 @@
     settings.mode = nextMode;
     saveSettings();
     updateActionState();
+    if (nextMode === "decoration" && tools.openDecoration) {
+      tools.openDecoration({
+        source: options && options.decorationSource,
+        onToast: showToast,
+        onBack: () => selectMode("count", { focusTab: true })
+      });
+    }
     if (announcementsReady && previousMode !== nextMode && nextMode === "count") {
       scheduleCountAnnouncement();
     }
@@ -2195,7 +2203,11 @@
     favoriteButton.dataset.kana = kana;
     favoriteButton.dataset.spelling = candidate.spelling;
     favoriteButton.setAttribute("aria-label", `${candidate.spelling}をお気に入りに登録または解除`);
-    actions.append(copyButton, favoriteButton);
+    const decorateButton = makeKanaButton("飾る", "button button--quiet", () => {
+      selectMode("decoration", { focusTab: true, decorationSource: candidate.spelling });
+    });
+    decorateButton.setAttribute("aria-label", `${candidate.spelling}を飾り文字で使う`);
+    actions.append(copyButton, decorateButton, favoriteButton);
     card.append(copy, actions);
     return card;
   }
@@ -2527,8 +2539,8 @@
   }
 
   async function deleteAllLocalData() {
-    if (!root.confirm("設定、入力下書き、カナスペルのお気に入り・履歴、演出候補・プリセットをこの端末から削除します。画面上の入力文章は残します。よろしいですか？")) return;
-    const keys = [storageKey, inputDraftKey, kanaCollectionsKey, kanaFavoritesKey, kanaHistoryKey, glitchLibraryKey];
+    if (!root.confirm("設定、入力下書き、カナスペルのお気に入り・履歴、演出候補・プリセット、飾り文字のお気に入り・表示密度をこの端末から削除します。画面上の入力文章は残します。よろしいですか？")) return;
+    const keys = [storageKey, inputDraftKey, kanaCollectionsKey, kanaFavoritesKey, kanaHistoryKey, glitchLibraryKey, "text-tool:decorative-text:v1"];
     if (draftTimer) root.clearTimeout(draftTimer);
     draftTimer = 0;
     if (glitchManualHistoryTimer) root.clearTimeout(glitchManualHistoryTimer);
@@ -2563,6 +2575,7 @@
       removed = false;
     }
     elements.deleteAllLocalDataButton.disabled = false;
+    root.dispatchEvent(new Event("texttools:decorative-reset"));
 
     if (!removed) {
       settings = loadSettings();

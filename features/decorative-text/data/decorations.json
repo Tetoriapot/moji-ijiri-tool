@@ -1,0 +1,4042 @@
+[
+  {
+    "id": "star-001",
+    "kind": "snippet",
+    "label": "四つ星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✦"
+  },
+  {
+    "id": "star-002",
+    "kind": "snippet",
+    "label": "細い四つ星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧"
+  },
+  {
+    "id": "star-003",
+    "kind": "snippet",
+    "label": "白い星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☆"
+  },
+  {
+    "id": "star-004",
+    "kind": "snippet",
+    "label": "黒い星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "★"
+  },
+  {
+    "id": "star-005",
+    "kind": "snippet",
+    "label": "小さな星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆"
+  },
+  {
+    "id": "star-006",
+    "kind": "snippet",
+    "label": "八方の星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✴"
+  },
+  {
+    "id": "star-007",
+    "kind": "snippet",
+    "label": "八本の光",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✷"
+  },
+  {
+    "id": "star-008",
+    "kind": "snippet",
+    "label": "重なる星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✵"
+  },
+  {
+    "id": "star-009",
+    "kind": "snippet",
+    "label": "三つの星",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✦ ✧ ✦"
+  },
+  {
+    "id": "star-010",
+    "kind": "snippet",
+    "label": "小星の行列",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆ ⋆ ⋆"
+  },
+  {
+    "id": "star-011",
+    "kind": "snippet",
+    "label": "星と点",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ✦ ·"
+  },
+  {
+    "id": "star-012",
+    "kind": "snippet",
+    "label": "星明かり",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☆ · ★ · ☆"
+  },
+  {
+    "id": "wrap-star-001",
+    "kind": "wrap",
+    "label": "四つ星で囲む",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✦ ",
+    "suffix": " ✦"
+  },
+  {
+    "id": "wrap-star-002",
+    "kind": "wrap",
+    "label": "白星で囲む",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "☆ ",
+    "suffix": " ☆"
+  },
+  {
+    "id": "wrap-star-003",
+    "kind": "wrap",
+    "label": "小星の囲み",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "⋆ ",
+    "suffix": " ⋆"
+  },
+  {
+    "id": "wrap-star-004",
+    "kind": "wrap",
+    "label": "三連星の囲み",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ ⋆ ",
+    "suffix": " ⋆ ✧"
+  },
+  {
+    "id": "wrap-star-005",
+    "kind": "wrap",
+    "label": "点と星の囲み",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "· ★ ",
+    "suffix": " ★ ·"
+  },
+  {
+    "id": "wrap-star-006",
+    "kind": "wrap",
+    "label": "流れ星の囲み",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "˚ ✦ ",
+    "suffix": " ✧ ˚"
+  },
+  {
+    "id": "spark-001",
+    "kind": "snippet",
+    "label": "光の粒",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ˚ ·"
+  },
+  {
+    "id": "spark-002",
+    "kind": "snippet",
+    "label": "小さなきらめき",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ · ˚"
+  },
+  {
+    "id": "spark-003",
+    "kind": "snippet",
+    "label": "きらめく星",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆ ˚ ✦"
+  },
+  {
+    "id": "spark-004",
+    "kind": "snippet",
+    "label": "光の十字",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⊹"
+  },
+  {
+    "id": "spark-005",
+    "kind": "snippet",
+    "label": "三つの光",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⊹ · ⊹"
+  },
+  {
+    "id": "spark-006",
+    "kind": "snippet",
+    "label": "星のしずく",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "˚ · ✧"
+  },
+  {
+    "id": "spark-007",
+    "kind": "snippet",
+    "label": "交わる光",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ + ✧"
+  },
+  {
+    "id": "spark-008",
+    "kind": "snippet",
+    "label": "きらめきの点列",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· + · + ·"
+  },
+  {
+    "id": "spark-009",
+    "kind": "snippet",
+    "label": "光の小道",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "˚ ✧ · ✦ ˚"
+  },
+  {
+    "id": "spark-010",
+    "kind": "snippet",
+    "label": "ちいさな輝き",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ ˚"
+  },
+  {
+    "id": "spark-011",
+    "kind": "snippet",
+    "label": "光の余韻",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✦ · ·"
+  },
+  {
+    "id": "spark-012",
+    "kind": "snippet",
+    "label": "星屑の点描",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ⋆ · ˚ ·"
+  },
+  {
+    "id": "wrap-spark-001",
+    "kind": "wrap",
+    "label": "光の粒で囲む",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "˚ · ",
+    "suffix": " · ˚"
+  },
+  {
+    "id": "wrap-spark-002",
+    "kind": "wrap",
+    "label": "きらめきで囲む",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ · ",
+    "suffix": " · ✧"
+  },
+  {
+    "id": "wrap-spark-003",
+    "kind": "wrap",
+    "label": "光の十字で囲む",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "⊹ ",
+    "suffix": " ⊹"
+  },
+  {
+    "id": "wrap-spark-004",
+    "kind": "wrap",
+    "label": "細い光の囲み",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "+ · ",
+    "suffix": " · +"
+  },
+  {
+    "id": "wrap-spark-005",
+    "kind": "wrap",
+    "label": "二重のきらめき",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✦ ✧ ",
+    "suffix": " ✧ ✦"
+  },
+  {
+    "id": "wrap-spark-006",
+    "kind": "wrap",
+    "label": "小さな光で囲む",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "· ˚ ✧ ",
+    "suffix": " ✧ ˚ ·"
+  },
+  {
+    "id": "heart-001",
+    "kind": "snippet",
+    "label": "白いハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♡"
+  },
+  {
+    "id": "heart-002",
+    "kind": "snippet",
+    "label": "黒いハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♥"
+  },
+  {
+    "id": "heart-003",
+    "kind": "snippet",
+    "label": "傾いたハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❥"
+  },
+  {
+    "id": "heart-004",
+    "kind": "snippet",
+    "label": "装飾ハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❣"
+  },
+  {
+    "id": "heart-005",
+    "kind": "snippet",
+    "label": "双子ハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♡ ♡"
+  },
+  {
+    "id": "heart-006",
+    "kind": "snippet",
+    "label": "交互のハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♡ ♥ ♡"
+  },
+  {
+    "id": "heart-007",
+    "kind": "snippet",
+    "label": "ハートの光",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ ♡ ✧"
+  },
+  {
+    "id": "heart-008",
+    "kind": "snippet",
+    "label": "ハートの点線",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ♡ ·"
+  },
+  {
+    "id": "heart-009",
+    "kind": "snippet",
+    "label": "ちいさな愛",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "˚ ♡ ˚"
+  },
+  {
+    "id": "heart-010",
+    "kind": "snippet",
+    "label": "想いの矢印",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "→ ♡"
+  },
+  {
+    "id": "heart-011",
+    "kind": "snippet",
+    "label": "ハートの列",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♥ · ♥ · ♥"
+  },
+  {
+    "id": "heart-012",
+    "kind": "snippet",
+    "label": "ハートの宝石",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "◇ ♡ ◇"
+  },
+  {
+    "id": "wrap-heart-001",
+    "kind": "wrap",
+    "label": "白ハートで囲む",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "♡ ",
+    "suffix": " ♡"
+  },
+  {
+    "id": "wrap-heart-002",
+    "kind": "wrap",
+    "label": "黒ハートで囲む",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "♥ ",
+    "suffix": " ♥"
+  },
+  {
+    "id": "wrap-heart-003",
+    "kind": "wrap",
+    "label": "ハートと星",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ ♡ ",
+    "suffix": " ♡ ✧"
+  },
+  {
+    "id": "wrap-heart-004",
+    "kind": "wrap",
+    "label": "二連ハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "♡♡ ",
+    "suffix": " ♡♡"
+  },
+  {
+    "id": "wrap-heart-005",
+    "kind": "wrap",
+    "label": "点とハート",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "· ♡ ",
+    "suffix": " ♡ ·"
+  },
+  {
+    "id": "wrap-heart-006",
+    "kind": "wrap",
+    "label": "愛のしるし",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "❥ ",
+    "suffix": " ❥"
+  },
+  {
+    "id": "flower-001",
+    "kind": "snippet",
+    "label": "白い花",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❀"
+  },
+  {
+    "id": "flower-002",
+    "kind": "snippet",
+    "label": "黒い花",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✿"
+  },
+  {
+    "id": "flower-003",
+    "kind": "snippet",
+    "label": "丸い花",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❁"
+  },
+  {
+    "id": "flower-004",
+    "kind": "snippet",
+    "label": "花のしるし",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✾"
+  },
+  {
+    "id": "flower-005",
+    "kind": "snippet",
+    "label": "六枚の花",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✽"
+  },
+  {
+    "id": "flower-006",
+    "kind": "snippet",
+    "label": "草葉の飾り",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❧"
+  },
+  {
+    "id": "flower-007",
+    "kind": "snippet",
+    "label": "葉の結び目",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❦"
+  },
+  {
+    "id": "flower-008",
+    "kind": "snippet",
+    "label": "花ふたつ",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❀ ❀"
+  },
+  {
+    "id": "flower-009",
+    "kind": "snippet",
+    "label": "花と点",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ❁ ·"
+  },
+  {
+    "id": "flower-010",
+    "kind": "snippet",
+    "label": "花の小道",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "❀ · ✿ · ❀"
+  },
+  {
+    "id": "flower-011",
+    "kind": "snippet",
+    "label": "花と光",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ ❀ ✧"
+  },
+  {
+    "id": "flower-012",
+    "kind": "snippet",
+    "label": "小さな花畑",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✿ ❁ ✿"
+  },
+  {
+    "id": "wrap-flower-001",
+    "kind": "wrap",
+    "label": "白花で囲む",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "❀ ",
+    "suffix": " ❀"
+  },
+  {
+    "id": "wrap-flower-002",
+    "kind": "wrap",
+    "label": "黒花で囲む",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✿ ",
+    "suffix": " ✿"
+  },
+  {
+    "id": "wrap-flower-003",
+    "kind": "wrap",
+    "label": "丸花で囲む",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "❁ ",
+    "suffix": " ❁"
+  },
+  {
+    "id": "wrap-flower-004",
+    "kind": "wrap",
+    "label": "葉の囲み",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "❧ ",
+    "suffix": " ❧"
+  },
+  {
+    "id": "wrap-flower-005",
+    "kind": "wrap",
+    "label": "花と光の囲み",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ ❀ ",
+    "suffix": " ❀ ✧"
+  },
+  {
+    "id": "wrap-flower-006",
+    "kind": "wrap",
+    "label": "草葉の額縁",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "❦ ",
+    "suffix": " ❦"
+  },
+  {
+    "id": "moon-001",
+    "kind": "snippet",
+    "label": "三日月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾"
+  },
+  {
+    "id": "moon-002",
+    "kind": "snippet",
+    "label": "反対向きの月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☽"
+  },
+  {
+    "id": "moon-003",
+    "kind": "snippet",
+    "label": "月と星",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ ⋆"
+  },
+  {
+    "id": "moon-004",
+    "kind": "snippet",
+    "label": "星と月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆ ☽"
+  },
+  {
+    "id": "moon-005",
+    "kind": "snippet",
+    "label": "夜の並び",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ · ✦"
+  },
+  {
+    "id": "moon-006",
+    "kind": "snippet",
+    "label": "月のきらめき",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "✧ ☾ ✧"
+  },
+  {
+    "id": "moon-007",
+    "kind": "snippet",
+    "label": "ふたつの月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ ☽"
+  },
+  {
+    "id": "moon-008",
+    "kind": "snippet",
+    "label": "夜空の粒",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ ˚ ·"
+  },
+  {
+    "id": "moon-009",
+    "kind": "snippet",
+    "label": "月への小道",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· · ☽"
+  },
+  {
+    "id": "moon-010",
+    "kind": "snippet",
+    "label": "真夜中",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "★ ☾ ★"
+  },
+  {
+    "id": "moon-011",
+    "kind": "snippet",
+    "label": "夜の窓",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ ◇ ☽"
+  },
+  {
+    "id": "moon-012",
+    "kind": "snippet",
+    "label": "月の余白",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "☾ · · ☽"
+  },
+  {
+    "id": "wrap-moon-001",
+    "kind": "wrap",
+    "label": "向かい合う月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "☾ ",
+    "suffix": " ☽"
+  },
+  {
+    "id": "wrap-moon-002",
+    "kind": "wrap",
+    "label": "月と星の囲み",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "☾ ⋆ ",
+    "suffix": " ⋆ ☽"
+  },
+  {
+    "id": "wrap-moon-003",
+    "kind": "wrap",
+    "label": "夜のきらめき",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ ☾ ",
+    "suffix": " ☽ ✧"
+  },
+  {
+    "id": "wrap-moon-004",
+    "kind": "wrap",
+    "label": "月の点描",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "☾ · ",
+    "suffix": " · ☽"
+  },
+  {
+    "id": "wrap-moon-005",
+    "kind": "wrap",
+    "label": "黒星の夜",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "★ ☾ ",
+    "suffix": " ☽ ★"
+  },
+  {
+    "id": "wrap-moon-006",
+    "kind": "wrap",
+    "label": "遠い月",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "· · ☾ ",
+    "suffix": " ☽ · ·"
+  },
+  {
+    "id": "wing-001",
+    "kind": "snippet",
+    "label": "羽のような組み合わせ",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "ʚ ɞ"
+  },
+  {
+    "id": "wing-002",
+    "kind": "snippet",
+    "label": "ハートを包む羽風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "ʚ♡ɞ"
+  },
+  {
+    "id": "wing-003",
+    "kind": "snippet",
+    "label": "星を包む羽風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "ʚ✧ɞ"
+  },
+  {
+    "id": "wing-004",
+    "kind": "snippet",
+    "label": "羽風の点列",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "ʚ · ɞ"
+  },
+  {
+    "id": "wing-005",
+    "kind": "snippet",
+    "label": "二重の羽風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "« »"
+  },
+  {
+    "id": "wing-006",
+    "kind": "snippet",
+    "label": "小さな翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "‹ ›"
+  },
+  {
+    "id": "wing-007",
+    "kind": "snippet",
+    "label": "光を包む翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "‹ ✦ ›"
+  },
+  {
+    "id": "wing-008",
+    "kind": "snippet",
+    "label": "花を包む羽風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "ʚ❀ɞ"
+  },
+  {
+    "id": "wing-009",
+    "kind": "snippet",
+    "label": "点を包む翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "« · »"
+  },
+  {
+    "id": "wing-010",
+    "kind": "snippet",
+    "label": "ひらいた翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "〈 〉"
+  },
+  {
+    "id": "wing-011",
+    "kind": "snippet",
+    "label": "小星の翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "‹ ⋆ ›"
+  },
+  {
+    "id": "wing-012",
+    "kind": "snippet",
+    "label": "月を包む翼風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "text": "‹ ☾ ›"
+  },
+  {
+    "id": "wrap-wing-001",
+    "kind": "wrap",
+    "label": "羽風の囲み",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "ʚ ",
+    "suffix": " ɞ"
+  },
+  {
+    "id": "wrap-wing-002",
+    "kind": "wrap",
+    "label": "翼風の囲み",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "‹ ",
+    "suffix": " ›"
+  },
+  {
+    "id": "wrap-wing-003",
+    "kind": "wrap",
+    "label": "二重翼風の囲み",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "« ",
+    "suffix": " »"
+  },
+  {
+    "id": "wrap-wing-004",
+    "kind": "wrap",
+    "label": "羽風とハート",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "ʚ ♡ ",
+    "suffix": " ♡ ɞ"
+  },
+  {
+    "id": "wrap-wing-005",
+    "kind": "wrap",
+    "label": "翼風と星",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "‹ ✦ ",
+    "suffix": " ✦ ›"
+  },
+  {
+    "id": "wrap-wing-006",
+    "kind": "wrap",
+    "label": "開く羽風",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "〈 ✧ ",
+    "suffix": " ✧ 〉"
+  },
+  {
+    "id": "divider-001",
+    "kind": "snippet",
+    "label": "細い短線",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "───"
+  },
+  {
+    "id": "divider-002",
+    "kind": "snippet",
+    "label": "点の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· · · · ·"
+  },
+  {
+    "id": "divider-003",
+    "kind": "snippet",
+    "label": "破線の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "- - - - -"
+  },
+  {
+    "id": "divider-004",
+    "kind": "snippet",
+    "label": "星の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "── ✦ ──"
+  },
+  {
+    "id": "divider-005",
+    "kind": "snippet",
+    "label": "花の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "── ❀ ──"
+  },
+  {
+    "id": "divider-006",
+    "kind": "snippet",
+    "label": "ハートの区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "── ♡ ──"
+  },
+  {
+    "id": "divider-007",
+    "kind": "snippet",
+    "label": "月の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "── ☾ ──"
+  },
+  {
+    "id": "divider-008",
+    "kind": "snippet",
+    "label": "菱形の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "── ◇ ──"
+  },
+  {
+    "id": "divider-009",
+    "kind": "snippet",
+    "label": "二重の線",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "═══"
+  },
+  {
+    "id": "divider-010",
+    "kind": "snippet",
+    "label": "波の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "～ ～ ～"
+  },
+  {
+    "id": "divider-011",
+    "kind": "snippet",
+    "label": "光の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "· ─ · ─ ·"
+  },
+  {
+    "id": "divider-012",
+    "kind": "snippet",
+    "label": "小星の区切り",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆ ─ ⋆ ─ ⋆"
+  },
+  {
+    "id": "wrap-divider-001",
+    "kind": "wrap",
+    "label": "線で挟む",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "─ ",
+    "suffix": " ─"
+  },
+  {
+    "id": "wrap-divider-002",
+    "kind": "wrap",
+    "label": "二重線で挟む",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "═ ",
+    "suffix": " ═"
+  },
+  {
+    "id": "wrap-divider-003",
+    "kind": "wrap",
+    "label": "点線で挟む",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "· · ",
+    "suffix": " · ·"
+  },
+  {
+    "id": "wrap-divider-004",
+    "kind": "wrap",
+    "label": "波で挟む",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "～ ",
+    "suffix": " ～"
+  },
+  {
+    "id": "wrap-divider-005",
+    "kind": "wrap",
+    "label": "星の見出し線",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "── ✦ ",
+    "suffix": " ✦ ──"
+  },
+  {
+    "id": "wrap-divider-006",
+    "kind": "wrap",
+    "label": "花の見出し線",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "── ❀ ",
+    "suffix": " ❀ ──"
+  },
+  {
+    "id": "geometry-001",
+    "kind": "snippet",
+    "label": "白い菱形",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "◇"
+  },
+  {
+    "id": "geometry-002",
+    "kind": "snippet",
+    "label": "黒い菱形",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "◆"
+  },
+  {
+    "id": "geometry-003",
+    "kind": "snippet",
+    "label": "白い丸",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "○"
+  },
+  {
+    "id": "geometry-004",
+    "kind": "snippet",
+    "label": "黒い丸",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "●"
+  },
+  {
+    "id": "geometry-005",
+    "kind": "snippet",
+    "label": "二重丸",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "◎"
+  },
+  {
+    "id": "geometry-006",
+    "kind": "snippet",
+    "label": "白い四角",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "□"
+  },
+  {
+    "id": "geometry-007",
+    "kind": "snippet",
+    "label": "黒い四角",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "■"
+  },
+  {
+    "id": "geometry-008",
+    "kind": "snippet",
+    "label": "白い三角",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "△"
+  },
+  {
+    "id": "geometry-009",
+    "kind": "snippet",
+    "label": "下向き三角",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "▽"
+  },
+  {
+    "id": "geometry-010",
+    "kind": "snippet",
+    "label": "菱形のリズム",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "◇ ◆ ◇"
+  },
+  {
+    "id": "geometry-011",
+    "kind": "snippet",
+    "label": "丸のリズム",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "○ · ○"
+  },
+  {
+    "id": "geometry-012",
+    "kind": "snippet",
+    "label": "四角のリズム",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "□ ■ □"
+  },
+  {
+    "id": "wrap-geometry-001",
+    "kind": "wrap",
+    "label": "角括弧",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "[",
+    "suffix": "]"
+  },
+  {
+    "id": "wrap-geometry-002",
+    "kind": "wrap",
+    "label": "丸括弧",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(",
+    "suffix": ")"
+  },
+  {
+    "id": "wrap-geometry-003",
+    "kind": "wrap",
+    "label": "隅付き括弧",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "【",
+    "suffix": "】"
+  },
+  {
+    "id": "wrap-geometry-004",
+    "kind": "wrap",
+    "label": "二重山括弧",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "《",
+    "suffix": "》"
+  },
+  {
+    "id": "wrap-geometry-005",
+    "kind": "wrap",
+    "label": "菱形の額縁",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "◇ ",
+    "suffix": " ◇"
+  },
+  {
+    "id": "wrap-geometry-006",
+    "kind": "wrap",
+    "label": "四角の額縁",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "□ ",
+    "suffix": " □"
+  },
+  {
+    "id": "arrow-001",
+    "kind": "snippet",
+    "label": "右矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "→"
+  },
+  {
+    "id": "arrow-002",
+    "kind": "snippet",
+    "label": "左矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "←"
+  },
+  {
+    "id": "arrow-003",
+    "kind": "snippet",
+    "label": "上矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "↑"
+  },
+  {
+    "id": "arrow-004",
+    "kind": "snippet",
+    "label": "下矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "↓"
+  },
+  {
+    "id": "arrow-005",
+    "kind": "snippet",
+    "label": "左右矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "↔"
+  },
+  {
+    "id": "arrow-006",
+    "kind": "snippet",
+    "label": "曲がる矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "↳"
+  },
+  {
+    "id": "arrow-007",
+    "kind": "snippet",
+    "label": "二重右矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⇒"
+  },
+  {
+    "id": "arrow-008",
+    "kind": "snippet",
+    "label": "細い右矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "➝"
+  },
+  {
+    "id": "arrow-009",
+    "kind": "snippet",
+    "label": "装飾右矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "➜"
+  },
+  {
+    "id": "arrow-010",
+    "kind": "snippet",
+    "label": "小星の矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "⋆ →"
+  },
+  {
+    "id": "arrow-011",
+    "kind": "snippet",
+    "label": "ハートへ続く矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "♡ →"
+  },
+  {
+    "id": "arrow-012",
+    "kind": "snippet",
+    "label": "左右の案内",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "← · →"
+  },
+  {
+    "id": "wrap-arrow-001",
+    "kind": "wrap",
+    "label": "内向き矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "→ ",
+    "suffix": " ←"
+  },
+  {
+    "id": "wrap-arrow-002",
+    "kind": "wrap",
+    "label": "外向き矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "← ",
+    "suffix": " →"
+  },
+  {
+    "id": "wrap-arrow-003",
+    "kind": "wrap",
+    "label": "二重矢印で囲む",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "⇒ ",
+    "suffix": " ⇐"
+  },
+  {
+    "id": "wrap-arrow-004",
+    "kind": "wrap",
+    "label": "小星と矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "⋆ → ",
+    "suffix": " ← ⋆"
+  },
+  {
+    "id": "wrap-arrow-005",
+    "kind": "wrap",
+    "label": "三角で示す",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "▷ ",
+    "suffix": " ◁"
+  },
+  {
+    "id": "wrap-arrow-006",
+    "kind": "wrap",
+    "label": "光と矢印",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "✧ → ",
+    "suffix": " ← ✧"
+  },
+  {
+    "id": "face-001",
+    "kind": "snippet",
+    "label": "にっこり",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(＾▽＾)"
+  },
+  {
+    "id": "face-002",
+    "kind": "snippet",
+    "label": "ほほえみ",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "( ´ ▽ ` )"
+  },
+  {
+    "id": "face-003",
+    "kind": "snippet",
+    "label": "てれ笑い",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(〃▽〃)"
+  },
+  {
+    "id": "face-004",
+    "kind": "snippet",
+    "label": "うれしい",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(*´▽`*)"
+  },
+  {
+    "id": "face-005",
+    "kind": "snippet",
+    "label": "ゆったり",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "( ˘ω˘ )"
+  },
+  {
+    "id": "face-006",
+    "kind": "snippet",
+    "label": "きらきらの目",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(☆▽☆)"
+  },
+  {
+    "id": "face-007",
+    "kind": "snippet",
+    "label": "おてて",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(つ´∀`)つ"
+  },
+  {
+    "id": "face-008",
+    "kind": "snippet",
+    "label": "ころん",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(・ω・)"
+  },
+  {
+    "id": "face-009",
+    "kind": "snippet",
+    "label": "ウインク",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(^_−)☆"
+  },
+  {
+    "id": "face-010",
+    "kind": "snippet",
+    "label": "びっくり",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(°▽°)"
+  },
+  {
+    "id": "face-011",
+    "kind": "snippet",
+    "label": "おねがい",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(人´∀`)"
+  },
+  {
+    "id": "face-012",
+    "kind": "snippet",
+    "label": "ねこ顔",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "text": "(=^･ω･^=)"
+  },
+  {
+    "id": "wrap-face-001",
+    "kind": "wrap",
+    "label": "にっこり添え",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(＾▽＾) ",
+    "suffix": " ♡"
+  },
+  {
+    "id": "wrap-face-002",
+    "kind": "wrap",
+    "label": "ねこが見守る",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(=^･ω･^=) ",
+    "suffix": " ☆"
+  },
+  {
+    "id": "wrap-face-003",
+    "kind": "wrap",
+    "label": "手を伸ばす",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(つ´∀`)つ ",
+    "suffix": " ✧"
+  },
+  {
+    "id": "wrap-face-004",
+    "kind": "wrap",
+    "label": "おねがい添え",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(人´∀`) ",
+    "suffix": " ❀"
+  },
+  {
+    "id": "wrap-face-005",
+    "kind": "wrap",
+    "label": "ゆったり添え",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "( ˘ω˘ ) ",
+    "suffix": " ☾"
+  },
+  {
+    "id": "wrap-face-006",
+    "kind": "wrap",
+    "label": "きらめく応援",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "囲み",
+      "名前",
+      "name",
+      "이름"
+    ],
+    "cautions": [
+      "font-dependent"
+    ],
+    "reviewStatus": "draft",
+    "prefix": "(☆▽☆) ",
+    "suffix": " ✦"
+  },
+  {
+    "id": "profile-001",
+    "kind": "template",
+    "label": "星のプロフィール",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "✦ ─── ✦\n{{text}}\n✦ ─── ✦"
+  },
+  {
+    "id": "profile-002",
+    "kind": "template",
+    "label": "小星の余白",
+    "categoryId": "star",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "⋆ · ⋆\n\n{{text}}\n⋆ · ⋆"
+  },
+  {
+    "id": "profile-003",
+    "kind": "template",
+    "label": "きらめきのプロフィール",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "✧ · ˚ · ✧\n{{text}}\n✧ · ˚ · ✧"
+  },
+  {
+    "id": "profile-004",
+    "kind": "template",
+    "label": "光の見出し",
+    "categoryId": "spark",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "⊹ · ⊹\n{{text}}\n· ˚ ·"
+  },
+  {
+    "id": "profile-005",
+    "kind": "template",
+    "label": "白ハートのプロフィール",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "♡ ─── ♡\n{{text}}\n♡ ─── ♡"
+  },
+  {
+    "id": "profile-006",
+    "kind": "template",
+    "label": "ハートの余韻",
+    "categoryId": "heart",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "♡ ♡ ♡\n{{text}}\n· ♡ ·"
+  },
+  {
+    "id": "profile-007",
+    "kind": "template",
+    "label": "花のプロフィール",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "❀ · ❁ · ❀\n{{text}}\n❀ · ❁ · ❀"
+  },
+  {
+    "id": "profile-008",
+    "kind": "template",
+    "label": "葉の便箋",
+    "categoryId": "flower",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "❦ ───\n{{text}}\n─── ❦"
+  },
+  {
+    "id": "profile-009",
+    "kind": "template",
+    "label": "夜空のプロフィール",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "☾ · ✦ · ☽\n{{text}}\n· ⋆ ·"
+  },
+  {
+    "id": "profile-010",
+    "kind": "template",
+    "label": "月明かりの便箋",
+    "categoryId": "moon",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "☾ ───\n{{text}}\n─── ☽"
+  },
+  {
+    "id": "profile-011",
+    "kind": "template",
+    "label": "羽風のプロフィール",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "ʚ ✧ ɞ\n{{text}}\nʚ ✧ ɞ"
+  },
+  {
+    "id": "profile-012",
+    "kind": "template",
+    "label": "翼風の額縁",
+    "categoryId": "wing",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "visual-reuse",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "‹ · ✦ · ›\n{{text}}\n‹ · ✦ · ›"
+  },
+  {
+    "id": "profile-013",
+    "kind": "template",
+    "label": "細線プロフィール",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "─────\n{{text}}\n─────"
+  },
+  {
+    "id": "profile-014",
+    "kind": "template",
+    "label": "点線プロフィール",
+    "categoryId": "divider",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "· · · · · ·\n{{text}}\n· · · · · ·"
+  },
+  {
+    "id": "profile-015",
+    "kind": "template",
+    "label": "菱形プロフィール",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "◇ ─ ◇\n{{text}}\n◇ ─ ◇"
+  },
+  {
+    "id": "profile-016",
+    "kind": "template",
+    "label": "四角プロフィール",
+    "categoryId": "geometry",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "□ · □ · □\n{{text}}\n□ · □ · □"
+  },
+  {
+    "id": "profile-017",
+    "kind": "template",
+    "label": "矢印の案内",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "→ → →\n{{text}}\n← ← ←"
+  },
+  {
+    "id": "profile-018",
+    "kind": "template",
+    "label": "矢印の見出し",
+    "categoryId": "arrow",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "▷ ───\n{{text}}\n─── ◁"
+  },
+  {
+    "id": "profile-019",
+    "kind": "template",
+    "label": "にっこりプロフィール",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "(＾▽＾)\n{{text}}\n· ♡ · ♡ ·"
+  },
+  {
+    "id": "profile-020",
+    "kind": "template",
+    "label": "ねこのプロフィール",
+    "categoryId": "face",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘",
+      "プロフィール",
+      "profile",
+      "프로필"
+    ],
+    "cautions": [
+      "font-dependent",
+      "multiline"
+    ],
+    "reviewStatus": "draft",
+    "template": "(=^･ω･^=)\n{{text}}\n· ☆ · ☆ ·"
+  }
+]

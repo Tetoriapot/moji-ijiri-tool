@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decorative text addon catalog",
+  "description": "Validate each complete styles.json, decorations.json, or categories.json array against this schema. Semantic constraints are additionally checked by scripts/validate-data.mjs.",
+  "oneOf": [
+    { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/style" } },
+    { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/decoration" } },
+    { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/category" } }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "maxLength": 64 },
+    "label": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "tags": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 80 } },
+    "cautions": { "type": "array", "uniqueItems": true, "items": { "enum": ["font-dependent", "not-for-important-text", "approximate", "visual-reuse", "multiline"] } },
+    "review": { "enum": ["draft", "reviewed"] },
+    "category": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "label", "tags"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "label": { "$ref": "#/$defs/label" }, "tags": { "$ref": "#/$defs/tags" } }
+    },
+    "style": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "label", "family", "tags", "map", "digitMode", "casePreserving", "approximate", "note", "cautions", "reviewStatus"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "label": { "$ref": "#/$defs/label" },
+        "family": { "type": "string", "minLength": 1 }, "tags": { "$ref": "#/$defs/tags" },
+        "map": { "type": "object", "minProperties": 62, "maxProperties": 62, "propertyNames": { "pattern": "^[A-Za-z0-9]$" }, "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 1 } },
+        "digitMode": { "enum": ["convert", "preserve"] }, "casePreserving": { "type": "boolean" },
+        "approximate": { "type": "boolean" }, "note": { "type": "string" },
+        "cautions": { "$ref": "#/$defs/cautions" }, "reviewStatus": { "$ref": "#/$defs/review" }
+      }
+    },
+    "decoration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "label", "kind", "categoryId", "tags", "cautions", "reviewStatus"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "label": { "$ref": "#/$defs/label" }, "kind": { "enum": ["snippet", "wrap", "template"] },
+        "categoryId": { "$ref": "#/$defs/id" }, "tags": { "$ref": "#/$defs/tags" }, "cautions": { "$ref": "#/$defs/cautions" },
+        "reviewStatus": { "$ref": "#/$defs/review" },
+        "text": { "type": "string", "minLength": 1 }, "prefix": { "type": "string", "minLength": 1 }, "suffix": { "type": "string", "minLength": 1 },
+        "template": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        { "properties": { "kind": { "const": "snippet" } }, "required": ["text"], "not": { "anyOf": [{"required":["prefix"]},{"required":["suffix"]},{"required":["template"]}] } },
+        { "properties": { "kind": { "const": "wrap" } }, "required": ["prefix", "suffix"], "not": { "anyOf": [{"required":["text"]},{"required":["template"]}] } },
+        { "properties": { "kind": { "const": "template" } }, "required": ["template"], "not": { "anyOf": [{"required":["text"]},{"required":["prefix"]},{"required":["suffix"]}] } }
+      ]
+    }
+  }
+}
+

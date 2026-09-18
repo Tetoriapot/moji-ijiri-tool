@@ -1,0 +1,114 @@
+[
+  {
+    "id": "star",
+    "label": "星",
+    "tags": [
+      "ほし",
+      "スター",
+      "star",
+      "stars",
+      "별"
+    ]
+  },
+  {
+    "id": "spark",
+    "label": "きらめき",
+    "tags": [
+      "きらきら",
+      "キラキラ",
+      "sparkle",
+      "shine",
+      "반짝"
+    ]
+  },
+  {
+    "id": "heart",
+    "label": "ハート",
+    "tags": [
+      "はーと",
+      "かわいい",
+      "heart",
+      "love",
+      "하트"
+    ]
+  },
+  {
+    "id": "flower",
+    "label": "花",
+    "tags": [
+      "はな",
+      "フラワー",
+      "flower",
+      "floral",
+      "꽃"
+    ]
+  },
+  {
+    "id": "moon",
+    "label": "月・夜",
+    "tags": [
+      "つき",
+      "よる",
+      "moon",
+      "night",
+      "달"
+    ]
+  },
+  {
+    "id": "wing",
+    "label": "羽風",
+    "tags": [
+      "はね",
+      "つばさ",
+      "wing",
+      "angel",
+      "날개"
+    ]
+  },
+  {
+    "id": "divider",
+    "label": "区切り線",
+    "tags": [
+      "くぎり",
+      "せん",
+      "ライン",
+      "line",
+      "divider",
+      "구분선"
+    ]
+  },
+  {
+    "id": "geometry",
+    "label": "幾何・括弧",
+    "tags": [
+      "きか",
+      "かっこ",
+      "シンプル",
+      "geometry",
+      "bracket",
+      "도형"
+    ]
+  },
+  {
+    "id": "arrow",
+    "label": "矢印",
+    "tags": [
+      "やじるし",
+      "arrow",
+      "direction",
+      "화살표"
+    ]
+  },
+  {
+    "id": "face",
+    "label": "顔文字",
+    "tags": [
+      "かおもじ",
+      "表情",
+      "face",
+      "kaomoji",
+      "emoticon",
+      "이모티콘"
+    ]
+  }
+]

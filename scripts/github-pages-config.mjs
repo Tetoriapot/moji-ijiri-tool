@@ -8,6 +8,8 @@ export const javascriptFiles = [
   "app.js",
   "boot.js",
   "count.js",
+  "decorative-loader.js",
+  "decorative.js",
   "encoding.js",
   "kana-spell.js",
   "local-data.js",

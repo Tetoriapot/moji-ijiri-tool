@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="文字数カウント、文字化け、鏡文字、カナスペル、ローマ字とかなの相互変換をブラウザだけで扱える文章加工ツールです。">
+  <meta name="description" content="文字数カウント、文字化け、鏡文字、カナスペル、ローマ字とかなの相互変換、飾り文字をブラウザだけで扱える文章加工ツールです。">
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
   <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#f3f1e9">
   <title>文字いじりツール</title>
-  <link rel="stylesheet" href="css/style.css?v=20260825-public1">
+  <link rel="stylesheet" href="css/style.css?v=20260918-decoration1">
 </head>
 <body>
   <a class="skip-link" href="#mainContent">本文へ移動</a>
@@ -41,8 +41,9 @@
             <option value="mirror">鏡文字</option>
             <option value="kana">カナスペル</option>
             <option value="romaji">ローマ字↔かな</option>
+            <option value="decoration">飾り文字</option>
           </select>
-          <span class="visually-hidden" id="mobileModeHint">5つの機能から選べます</span>
+          <span class="visually-hidden" id="mobileModeHint">6つの機能から選べます</span>
         </div>
         <button class="mobile-result-jump" id="mobileResultJump" type="button" aria-controls="countResults">
           <span id="mobileResultJumpLabel">集計結果へ</span><span aria-hidden="true">↓</span>
@@ -65,13 +66,24 @@
               </span>
               <span class="updates-latest">
                 <span class="updates-badge">最新</span>
-                <time datetime="2026-08-25">2026.08.25</time>
-                <span>URL限定公開に向けたプライバシー・安全・負荷対策を追加</span>
+                <time datetime="2026-09-18">2026.09.18</time>
+                <span>飾り文字・記号集・名前とプロフィールの装飾を追加</span>
               </span>
               <span class="updates-chevron" aria-hidden="true">⌄</span>
             </summary>
             <div class="updates-content">
               <article class="update-entry update-entry--latest">
+                <div class="update-entry-heading">
+                  <time datetime="2026-09-18">2026.09.18</time><span>飾り文字</span>
+                </div>
+                <h3>英字を変えて、記号で飾る</h3>
+                <ul>
+                  <li>英字16スタイル、記号120件、囲み60件、複数行テンプレ20件を追加</li>
+                  <li>検索・記号挿入・お気に入り・カナ候補から「飾る」に対応</li>
+                  <li>飾り文字の本文はメモリのみ。お気に入りのプリセットIDと表示密度だけを端末保存</li>
+                </ul>
+              </article>
+              <article class="update-entry">
                 <div class="update-entry-heading">
                   <time datetime="2026-08-25">2026.08.25</time>
                   <span>限定公開</span>
@@ -184,6 +196,7 @@
                 <h3>このブラウザに保存されるもの</h3>
                 <ul>
                   <li>選択したモードや変換設定</li>
+                  <li>飾り文字のお気に入り（プリセットID）と表示密度。本文は保存せず、この欄の件数・JSON書き出しには含みません</li>
                   <li>オンにした場合だけ、入力下書き1件</li>
                   <li>カナスペルのお気に入り最大100件と履歴最大20件</li>
                   <li>演出用の保存候補最大20件（候補名・元の入力・変換結果を含む）と名前付きプリセット最大12件</li>
@@ -230,10 +243,29 @@
             <button class="tab" id="tab-romaji" type="button" role="tab" aria-selected="false" aria-controls="panel-romaji" data-mode="romaji" tabindex="-1" aria-label="ローマ字とかなの相互変換">
               <span class="tab-number" aria-hidden="true">05</span>ローマ字↔かな
             </button>
+            <button class="tab" id="tab-decoration" type="button" role="tab" aria-selected="false" aria-controls="panel-decoration" data-mode="decoration" tabindex="-1">
+              <span class="tab-number" aria-hidden="true">06</span>飾り文字
+            </button>
           </div>
         </div>
 
         <div class="workspace-body">
+          <section class="mode-panel decoration-panel" id="panel-decoration" role="tabpanel" aria-labelledby="tab-decoration" tabindex="0" hidden>
+            <div class="panel-heading"><div><p class="section-kicker">DECORATIVE TEXT</p><h3>飾り文字</h3></div></div>
+            <p>英字を変換したり、記号で囲んだり。できた文字はそのままコピー。</p>
+            <p class="deco-notice">表示や使用可否は貼り付け先によって変わります。</p>
+            <details class="deco-help"><summary>使う前に・保存について</summary>
+              <p>筆記体風の文字はフォントではなく別のUnicode文字です。検索・読み上げ・ユーザー名登録で通常の英字と異なる扱いになることがあります。重要な案内や長文には通常文字も併記してください。</p>
+              <p>このモードの本文・コピー結果は保存・送信しません。モード間の移動中だけ保持し、再読み込みで消えます。端末に保存するのはお気に入りのプリセットIDと表示密度のみです。既存ツールの下書き保存とは独立しています。ブラウザ自身の入力復元やクリップボードの履歴までは制御できません。</p>
+              <p>全プリセットは表示確認前の初期データです。端末により表示が変わる記号を含みます。SNSの登録可否や文字数上限は判定しません。</p>
+            </details>
+            <div id="decorationLoading">
+              <p id="decorationLoadStatus" role="status">飾り文字を読み込んでいます…</p>
+              <button class="button button--quiet" id="decorationRetry" type="button" hidden>再試行</button>
+              <button class="button button--quiet" id="decorationBack" type="button">既存ツールに戻る</button>
+            </div>
+            <div id="decorationHost" hidden></div>
+          </section>
           <section class="input-section" id="sharedInputRegion" aria-labelledby="input-heading">
             <div class="section-heading">
               <div>
@@ -865,6 +897,7 @@
   <script src="js/encoding.js?v=20260825-public1" defer></script>
   <script src="js/local-data.js?v=20260825-public1" defer></script>
   <script src="js/workflow.js?v=20260825-public1" defer></script>
-  <script src="js/app.js?v=20260825-public1" defer></script>
+  <script src="js/decorative-loader.js?v=20260918-decoration1" defer></script>
+  <script src="js/app.js?v=20260918-decoration1" defer></script>
 </body>
 </html>
