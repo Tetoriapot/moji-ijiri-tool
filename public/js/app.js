@@ -68,7 +68,6 @@
   const elements = {
     tabs: Array.from(document.querySelectorAll('.tabs [role="tab"]')),
     panels: Array.from(document.querySelectorAll('.mode-panel[role="tabpanel"]')),
-    mobileModeSelect: document.getElementById("mobileModeSelect"),
     mobileResultJump: document.getElementById("mobileResultJump"),
     mobileResultJumpLabel: document.getElementById("mobileResultJumpLabel"),
     sharedInputRegion: document.getElementById("sharedInputRegion"),
@@ -1063,7 +1062,6 @@
       decoration: { target: "panel-decoration", label: "飾り文字へ" }
     };
     const configuration = configurations[mode] || configurations.count;
-    elements.mobileModeSelect.value = mode;
     elements.mobileResultJumpLabel.textContent = configuration.label;
     elements.mobileResultJump.setAttribute("aria-controls", configuration.target);
     elements.mobileResultJump.setAttribute("aria-label", `${configuration.label}移動`);
@@ -1103,6 +1101,13 @@
       tab.tabIndex = selected ? 0 : -1;
       if (selected && shouldFocus) {
         tab.focus();
+      }
+      if (selected) {
+        // Reveal a restored/selected tab; horizontal scrolling leaves the page position alone.
+        const strip = tab.parentElement;
+        if (strip && strip.scrollWidth > strip.clientWidth) {
+          strip.scrollLeft = tab.offsetLeft - (strip.clientWidth - tab.offsetWidth) / 2;
+        }
       }
     });
     elements.panels.forEach((panel) => {
@@ -2540,7 +2545,7 @@
 
   async function deleteAllLocalData() {
     if (!root.confirm("設定、入力下書き、カナスペルのお気に入り・履歴、演出候補・プリセット、飾り文字のお気に入り・表示密度をこの端末から削除します。画面上の入力文章は残します。よろしいですか？")) return;
-    const keys = [storageKey, inputDraftKey, kanaCollectionsKey, kanaFavoritesKey, kanaHistoryKey, glitchLibraryKey, "text-tool:decorative-text:v1"];
+    const keys = [storageKey, inputDraftKey, kanaCollectionsKey, kanaFavoritesKey, kanaHistoryKey, glitchLibraryKey, "text-tool:decorative-text:v1", "textTools.theme.v1"];
     if (draftTimer) root.clearTimeout(draftTimer);
     draftTimer = 0;
     if (glitchManualHistoryTimer) root.clearTimeout(glitchManualHistoryTimer);
@@ -2576,6 +2581,7 @@
     }
     elements.deleteAllLocalDataButton.disabled = false;
     root.dispatchEvent(new Event("texttools:decorative-reset"));
+    root.dispatchEvent(new Event("texttools:theme-reload"));
 
     if (!removed) {
       settings = loadSettings();
@@ -3418,7 +3424,13 @@
   }
 
   function bindEvents() {
-    elements.mobileModeSelect.addEventListener("change", () => selectMode(elements.mobileModeSelect.value));
+    const utilityMenu = document.getElementById("utilityMenu");
+    utilityMenu.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !utilityMenu.open) return;
+      event.preventDefault();
+      utilityMenu.open = false;
+      utilityMenu.querySelector("summary").focus();
+    });
     elements.mobileResultJump.addEventListener("click", jumpToMobileResult);
 
     elements.tabs.forEach((tab, index) => {

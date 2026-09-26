@@ -7,6 +7,7 @@ export const outputDirectory = path.join(repositoryRoot, "github-pages-dist");
 export const javascriptFiles = [
   "app.js",
   "boot.js",
+  "theme.js",
   "count.js",
   "decorative-loader.js",
   "decorative.js",

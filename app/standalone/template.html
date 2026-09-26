@@ -9,7 +9,8 @@
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#f3f1e9">
   <title>文字いじりツール</title>
-  <link rel="stylesheet" href="css/style.css?v=20260918-decoration1">
+  <script src="js/theme.js?v=20260926-theme1"></script>
+  <link rel="stylesheet" href="css/style.css?v=20260926-theme1">
 </head>
 <body>
   <a class="skip-link" href="#mainContent">本文へ移動</a>
@@ -26,30 +27,18 @@
         </div>
       </div>
       <div class="header-copy">
-        <p>数える、崩す、反転する、名づける、読みかえる。<br>文章のための小さな作業机です。</p>
-        <div class="privacy-chip"><span aria-hidden="true"></span>URL限定公開・端末内処理</div>
+        <label class="theme-control" for="themeSelect"><span>配色</span>
+          <select id="themeSelect" aria-label="配色" aria-describedby="themeStatus">
+            <option value="system">端末に合わせる</option>
+            <option value="light">ライト</option>
+            <option value="dark">ダーク</option>
+          </select>
+        </label>
+        <span class="theme-status visually-hidden" id="themeStatus" role="status" aria-live="polite"></span>
       </div>
     </header>
 
     <main id="mainContent" tabindex="-1">
-      <nav class="mobile-workspace-nav" aria-label="モードと結果への移動">
-        <div class="mobile-mode-field">
-          <label for="mobileModeSelect">加工モード</label>
-          <select id="mobileModeSelect" aria-describedby="mobileModeHint">
-            <option value="count">文字数カウント</option>
-            <option value="mojibake">文字化け</option>
-            <option value="mirror">鏡文字</option>
-            <option value="kana">カナスペル</option>
-            <option value="romaji">ローマ字↔かな</option>
-            <option value="decoration">飾り文字</option>
-          </select>
-          <span class="visually-hidden" id="mobileModeHint">6つの機能から選べます</span>
-        </div>
-        <button class="mobile-result-jump" id="mobileResultJump" type="button" aria-controls="countResults">
-          <span id="mobileResultJumpLabel">集計結果へ</span><span aria-hidden="true">↓</span>
-        </button>
-      </nav>
-
       <section class="tool-card" aria-labelledby="workspace-title">
         <div class="startup-status" id="startupStatus" role="alert" hidden>
           <strong>ツールを開始できませんでした。</strong>
@@ -57,6 +46,13 @@
         </div>
         <h2 id="workspace-title" class="visually-hidden">文章加工ワークスペース</h2>
 
+        <details class="utility-menu" id="utilityMenu">
+          <summary class="utility-summary">
+            <span class="utility-heading">お知らせ・設定</span>
+            <span class="utility-privacy">端末内処理<span class="utility-access"> · URL限定公開・認証なし</span></span>
+            <span class="utility-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="utility-content">
         <aside class="updates-menu" aria-label="更新情報">
           <details class="updates-disclosure">
             <summary class="updates-summary">
@@ -66,13 +62,24 @@
               </span>
               <span class="updates-latest">
                 <span class="updates-badge">最新</span>
-                <time datetime="2026-09-18">2026.09.18</time>
-                <span>飾り文字・記号集・名前とプロフィールの装飾を追加</span>
+                <time datetime="2026-09-26">2026.09.26</time>
+                <span>上部を整理・ライト／ダークモードに対応</span>
               </span>
               <span class="updates-chevron" aria-hidden="true">⌄</span>
             </summary>
             <div class="updates-content">
               <article class="update-entry update-entry--latest">
+                <div class="update-entry-heading">
+                  <time datetime="2026-09-26">2026.09.26</time><span>使いやすさ</span>
+                </div>
+                <h3>作業に集中できる、すっきりした画面へ</h3>
+                <ul>
+                  <li>更新情報・公開範囲・端末内データを「お知らせ・設定」に集約</li>
+                  <li>ライト／ダークと端末の配色への追従に対応。選択はこのブラウザに保存</li>
+                  <li>6つの機能タブを1行に。狭い画面では横スクロールで選択</li>
+                </ul>
+              </article>
+              <article class="update-entry">
                 <div class="update-entry-heading">
                   <time datetime="2026-09-18">2026.09.18</time><span>飾り文字</span>
                 </div>
@@ -195,7 +202,7 @@
               <div class="device-data-explanation">
                 <h3>このブラウザに保存されるもの</h3>
                 <ul>
-                  <li>選択したモードや変換設定</li>
+                  <li>選択したモードや変換設定、ライト／ダークの配色。配色はJSON書き出しには含みません</li>
                   <li>飾り文字のお気に入り（プリセットID）と表示密度。本文は保存せず、この欄の件数・JSON書き出しには含みません</li>
                   <li>オンにした場合だけ、入力下書き1件</li>
                   <li>カナスペルのお気に入り最大100件と履歴最大20件</li>
@@ -225,6 +232,8 @@
             <p class="device-data-status" id="deviceDataStatus" role="status" aria-live="polite"></p>
           </details>
         </section>
+          </div>
+        </details>
 
         <div class="tabs-wrap">
           <div class="tabs" role="tablist" aria-label="加工モード">
@@ -248,6 +257,13 @@
             </button>
           </div>
         </div>
+
+        <nav class="mobile-workspace-nav" aria-label="結果への移動">
+          <span class="mobile-tabs-hint">タブは横にスクロールできます</span>
+          <button class="mobile-result-jump" id="mobileResultJump" type="button" aria-controls="countResults">
+            <span id="mobileResultJumpLabel">集計結果へ</span><span aria-hidden="true">↓</span>
+          </button>
+        </nav>
 
         <div class="workspace-body">
           <section class="mode-panel decoration-panel" id="panel-decoration" role="tabpanel" aria-labelledby="tab-decoration" tabindex="0" hidden>
@@ -898,6 +914,6 @@
   <script src="js/local-data.js?v=20260825-public1" defer></script>
   <script src="js/workflow.js?v=20260825-public1" defer></script>
   <script src="js/decorative-loader.js?v=20260918-decoration1" defer></script>
-  <script src="js/app.js?v=20260918-decoration1" defer></script>
+  <script src="js/app.js?v=20260926-theme1" defer></script>
 </body>
 </html>
