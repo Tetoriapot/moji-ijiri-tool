@@ -62,17 +62,27 @@
               </span>
               <span class="updates-latest">
                 <span class="updates-badge">最新</span>
-                <time datetime="2026-09-26">2026.09.26</time>
-                <span>上部を整理・ライト／ダークモードに対応</span>
+                <time datetime="2026-11-08">2026.11.08</time>
+                <span>機能と操作が分かる説明に変更</span>
               </span>
               <span class="updates-chevron" aria-hidden="true">⌄</span>
             </summary>
             <div class="updates-content">
               <article class="update-entry update-entry--latest">
                 <div class="update-entry-heading">
+                  <time datetime="2026-11-08">2026.11.08</time><span>説明文</span>
+                </div>
+                <h3>見出しと操作説明を変更</h3>
+                <ul>
+                  <li>カナスペル、鏡文字、飾り文字の機能と操作を具体的に記載</li>
+                  <li>変換処理、設定項目、保存形式、プリセットは変更なし</li>
+                </ul>
+              </article>
+              <article class="update-entry">
+                <div class="update-entry-heading">
                   <time datetime="2026-09-26">2026.09.26</time><span>使いやすさ</span>
                 </div>
-                <h3>作業に集中できる、すっきりした画面へ</h3>
+                <h3>上部メニューの集約と配色切替を追加</h3>
                 <ul>
                   <li>更新情報・公開範囲・端末内データを「お知らせ・設定」に集約</li>
                   <li>ライト／ダークと端末の配色への追従に対応。選択はこのブラウザに保存</li>
@@ -83,7 +93,7 @@
                 <div class="update-entry-heading">
                   <time datetime="2026-09-18">2026.09.18</time><span>飾り文字</span>
                 </div>
-                <h3>英字を変えて、記号で飾る</h3>
+                <h3>英字スタイル変換と記号による装飾を追加</h3>
                 <ul>
                   <li>英字16スタイル、記号120件、囲み60件、複数行テンプレ20件を追加</li>
                   <li>検索・記号挿入・お気に入り・カナ候補から「飾る」に対応</li>
@@ -268,7 +278,7 @@
         <div class="workspace-body">
           <section class="mode-panel decoration-panel" id="panel-decoration" role="tabpanel" aria-labelledby="tab-decoration" tabindex="0" hidden>
             <div class="panel-heading"><div><p class="section-kicker">DECORATIVE TEXT</p><h3>飾り文字</h3></div></div>
-            <p>英字を変換したり、記号で囲んだり。できた文字はそのままコピー。</p>
+            <p>英字を筆記体風などの文字に変換し、記号で囲めます。変換結果はコピーボタンでコピーできます。</p>
             <p class="deco-notice">表示や使用可否は貼り付け先によって変わります。</p>
             <details class="deco-help"><summary>使う前に・保存について</summary>
               <p>筆記体風の文字はフォントではなく別のUnicode文字です。検索・読み上げ・ユーザー名登録で通常の英字と異なる扱いになることがあります。重要な案内や長文には通常文字も併記してください。</p>
@@ -451,7 +461,7 @@
             <div class="panel-heading">
               <div>
                 <p class="section-kicker">GLITCH</p>
-                <h3>何をしたいですか？</h3>
+                <h3>文字化けの処理を選択</h3>
               </div>
               <p>目的を選ぶと、必要な操作だけを表示します。</p>
             </div>
@@ -648,7 +658,7 @@
                 </label>
                 <label class="choice-card choice-card--compact">
                   <input type="radio" name="mirrorMethod" value="combined">
-                  <span class="choice-card-body"><span class="choice-mark" aria-hidden="true">⇆</span><span><strong>文字順＋鏡文字</strong><small>より鏡らしい見た目に</small></span></span>
+                  <span class="choice-card-body"><span class="choice-mark" aria-hidden="true">⇆</span><span><strong>文字順＋鏡文字</strong><small>文字順を逆転し、対応文字を置換</small></span></span>
                 </label>
                 <label class="choice-card choice-card--compact">
                   <input type="radio" name="mirrorMethod" value="upsideDown">
@@ -679,7 +689,7 @@
                 <p class="section-kicker">NAME SPELLING</p>
                 <h3>カナスペル</h3>
               </div>
-              <p>カタカナの名前を、創作に使いやすいアルファベット表記へ。正解を決めず、複数の綴りを提案します。</p>
+              <p>カタカナの名前から、複数のアルファベット表記候補を生成します。「表記テイスト」と「表記の変化」で綴りを調整できます。</p>
             </div>
 
             <div class="kana-compose-card">
@@ -689,7 +699,7 @@
               </div>
               <div class="kana-input-row">
                 <input id="kanaInput" type="text" maxlength="100" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="カタカナの名前を入力" aria-describedby="kanaInputHint kanaInputError">
-                <button class="button button--accent kana-generate-button" id="kanaGenerateButton" type="button">英字名をつくる</button>
+                <button class="button button--accent kana-generate-button" id="kanaGenerateButton" type="button">表記候補を生成</button>
               </div>
               <p class="kana-input-error" id="kanaInputError" role="alert"></p>
             </div>
@@ -723,7 +733,7 @@
               <div class="kana-section-heading">
                 <div>
                   <p class="section-kicker">SUGGESTIONS</p>
-                  <h3 id="kana-results-heading">こんな表記はいかがですか？</h3>
+                  <h3 id="kana-results-heading">アルファベット表記の候補</h3>
                 </div>
                 <span class="kana-result-count" id="kanaResultCount" hidden></span>
               </div>
@@ -733,11 +743,11 @@
               </div>
               <div class="kana-empty-state" id="kanaEmptyState">
                 <span aria-hidden="true">Aa</span>
-                <p><strong>名前を入力すると候補が並びます。</strong>たとえば「リプサム・グリーキング」なら、Lipsum Greeking などを提案します。</p>
+                <p><strong>名前を入力して「表記候補を生成」を押すと、候補を表示します。</strong>「リプサム・グリーキング」からはLipsum Greekingなどを提案します。</p>
               </div>
               <div id="kanaGeneratedResults" hidden>
                 <section class="kana-recommendation" aria-labelledby="kana-recommended-heading">
-                  <div class="kana-subheading"><span>おすすめ</span><h4 id="kana-recommended-heading">バランスのよい表記</h4></div>
+                  <div class="kana-subheading"><span>おすすめ</span><h4 id="kana-recommended-heading">優先候補</h4></div>
                   <div id="kanaRecommendedCard"></div>
                 </section>
                 <section class="kana-alternatives" aria-labelledby="kana-alternatives-heading">
@@ -758,7 +768,7 @@
                   <div><p class="section-kicker">SAVED</p><h3 id="kana-favorites-heading">お気に入り</h3></div>
                   <span>この端末内に保存</span>
                 </div>
-                <p class="kana-saved-empty" id="kanaFavoritesEmpty">気に入った候補の「☆ お気に入り」から保存できます。</p>
+                <p class="kana-saved-empty" id="kanaFavoritesEmpty">候補の「☆ お気に入り」を押すと、この端末に保存できます。</p>
                 <ul class="kana-saved-list" id="kanaFavoritesList"></ul>
               </section>
 
@@ -898,7 +908,7 @@
 
     <footer class="site-footer">
       <p><span class="privacy-dot" aria-hidden="true"></span>入力された文章・名前は端末内だけで処理され、アプリから外部へ送信されません。</p>
-      <p>URL限定公開（検索対象外・認証なし） <span aria-hidden="true">／</span> 文章のための小さな文房具</p>
+      <p>URL限定公開（検索対象外・認証なし） <span aria-hidden="true">／</span> 文字数カウント・文字変換・装飾</p>
     </footer>
   </div>
 
@@ -908,12 +918,12 @@
   <script src="js/count.js?v=20260825-public1" defer></script>
   <script src="js/mojibake.js?v=20260825-public1" defer></script>
   <script src="js/mirror.js?v=20260825-public1" defer></script>
-  <script src="js/kana-spell.js?v=20260825-public1" defer></script>
+  <script src="js/kana-spell.js?v=20261108-copy1" defer></script>
   <script src="js/roman-kana.js?v=20260825-public1" defer></script>
   <script src="js/encoding.js?v=20260825-public1" defer></script>
   <script src="js/local-data.js?v=20260825-public1" defer></script>
   <script src="js/workflow.js?v=20260825-public1" defer></script>
-  <script src="js/decorative-loader.js?v=20260918-decoration1" defer></script>
+  <script src="js/decorative-loader.js?v=20261108-copy1" defer></script>
   <script src="js/app.js?v=20260926-theme1" defer></script>
 </body>
 </html>

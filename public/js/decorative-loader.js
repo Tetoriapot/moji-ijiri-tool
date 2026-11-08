@@ -1,7 +1,7 @@
 (function (root) {
   "use strict";
   root.TextTools = root.TextTools || {};
-  const asset = new URL("decorative.js?v=20260918-decoration1", document.currentScript.src).href;
+  const asset = new URL("decorative.js?v=20261108-copy1", document.currentScript.src).href;
   let loading;
   let instance;
   let request = 0;

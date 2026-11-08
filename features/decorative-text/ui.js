@@ -375,7 +375,7 @@ root.TextTools.createDecorativeUI = function (host, options) {
     listCount.textContent = `${items.length}件中 ${Math.min(state.limit, items.length)}件を表示`;
     empty.hidden = items.length > 0;
     emptyMessage.textContent = state.tab === "favorites" && !preferences.favorites.length
-      ? "気に入った文字や飾りの星を押すと、ここからすぐ使えます。" : "見つかりませんでした。検索やカテゴリを変えてみてください。";
+      ? "お気に入りはありません。各項目の星ボタンを押すと登録できます。" : "条件に一致する項目がありません。検索語やカテゴリを変更してください。";
     more.hidden = items.length <= state.limit;
     more.textContent = `もっと表示（残り${Math.max(0, items.length - state.limit)}件）`;
     if (activeKey && (restoreFocus || activeWasInside)) {
